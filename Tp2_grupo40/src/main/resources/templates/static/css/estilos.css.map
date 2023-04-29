@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;SAEU;EACR,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,eAAe,EAAE,IAAI;EACrB,UAAU,EAAE,IAAI;EAChB,eAAe,EAAE,MAAM;;;AAGzB,WAAY;EACV,gBAAgB,ECNT,OAAO;EDOd,KAAK,ECLA,OAAO;;;ADQd,OAAQ;EACN,OAAO,EAAE,IAAI;;;AEjBf,IAAK;EACD,WAAW,EDAA,qBAAqB;ECChC,KAAK,EDSD,OAAO;ECRX,WAAW,EAAE,GAAG",
+"sources": ["../scss/base/_base.scss","../scss/abstracts/_variables.scss","../scss/base/_typography.scss"],
+"names": [],
+"file": "estilos.css"
+}
