@@ -1,9 +1,18 @@
 @import "abstracts/variables";
-@import "base/normalize";
+
+
 @import "base/base";
 @import "base/typography";
+
 @import "layout/header";
+@import "layout/footer";
 @import "layout/heroIndex";
 @import "layout/welcome";
 @import "layout/aboutus";
+<<<<<<< HEAD
 @import "layout/service";
+=======
+@import "layout/consejos";
+@import "layout/products";
+
+>>>>>>> branch 'css' of https://github.com/RaulAdr14n/Tp2_grupo40_repo.git

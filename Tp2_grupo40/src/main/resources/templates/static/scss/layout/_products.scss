@@ -1,0 +1,72 @@
+.products__container {
+    position: relative;
+    width: 60%;
+    padding: 1rem;
+    margin: auto;
+    background-color: $white;
+    position: relative;
+    display: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.productsDog__img{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.productsDog__img img {
+    width: 500px;
+    height: 500px;
+    border-radius: 1000px;
+    padding: 1rem;
+  }
+
+.products__container h1 {
+    color: $orange;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.products__container h2 {
+    color: $backgroundBlack;
+    font-family: $subtittle-font;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 2rem;
+    width: 75%;
+    margin: auto;
+}
+
+.products__container h3 {
+    color: $blue;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: rem;
+    letter-spacing: 0px;
+    line-height: 3rem;
+    padding: 0.5rem;
+}
+
+.products__container p {
+    color: $backgroundBlack;
+    line-height: 2rem;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0.5rem;
+}
+
+.products__container h6 {
+    color: $backgroundBlack;
+    font-family: $primary-font;
+    text-align: justify;
+    padding: 0.5rem;
+}
