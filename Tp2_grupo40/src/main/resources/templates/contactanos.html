@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#DC3C4D" />
+    <!--  icon  -->
+    <link rel="icon" href="static/images/icon.svg" />
+    <!--  fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--  styles  -->
+    <link rel="stylesheet" href="static/css/estilos.css" />
+    <title>Contactanos</title>
+  </head>
 
-<head>
-   <meta charset="utf-8">
-   <!--  icon  -->
-   <link rel="icon" href="static/images/icon.svg" />
-   <!--  fonts  -->
-   <link href="https://fonts.cdnfonts.com/css/kollektif" rel="stylesheet" />
-   <link rel="preconnect" href="https://fonts.googleapis.com" />
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-   <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-      rel="stylesheet" />
-
-   <!--  styles  -->
-   <link rel="stylesheet" href="static/css/estilos.css" />
-   <title>Insert title here</title>
-</head>
-
-<body>
-   <div>
-
-      <h1>Contactanos</h1>
-      <p>Av Senador Perez n 1234, Numero de contacto: 3885178176</p>
-      <P>Abierto de :</P>
-      <p>Lunes a viernes de 9:00 hs a 12:30 hs y de 17:00 hs a 21:00 hs</p>
-      <p>Sabados 9:00 hs a 12:00 hs</p>
-      <a href="animalada@gmail.com">animalada@gmail.com </a><br>
-
-
+  <header class="header__container">
+    <nav class="menu">
       <ul>
-
-         <li><a href="facebook">facebook</a></li>
-         <li><a href="instagram">instagram</a></li>
-         <li><a href="twiter">twiter</a></li>
-
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+        <li><a href="consejos.html">CONSEJOS DE SALUD</a></li>
+        <li><a href="servicio.html">SERVICIOS DE PASEOS</a></li>
+        <li><a href="sucursales.html">SUCURSALES</a></li>
+        <li><a href="contactanos.html">CONTACTO</a></li>
       </ul>
-   </div>
+    </nav>
+  </header>
 
+  <body>
+    <div class="contact__container">
+      <div class="img__contact">
+        <img
+          src="static/images/bulldog.png"
+          alt="bulldog inglés en fondo rosado"
+        />
+      </div>
+      <div class="form__contact">
+        <h1>Contactanos</h1>
+        <p>Av Senador Perez n 1234, Numero de contacto: 3885178176</p>
+        <p>Abierto de :</p>
+        <p>Lunes a viernes de 9:00 hs a 12:30 hs y de 17:00 hs a 21:00 hs</p>
+        <p>Sabados 9:00 hs a 12:00 hs</p>
 
-   <form action=""></form>
-   <label>Nombre: </label><br>
-   <input type="text" placeholder="escribir nombre"> <br>
+        <ul>
+          <li><a href="animalada@gmail.com">animalada@gmail.com </a></li>
+          <li><a href="www.facebook.com">facebook</a></li>
+          <li><a href="www.instagram.com">instagram</a></li>
+          <li><a href="www.twiter.com">twiter</a></li>
+        </ul>
 
-   <label for="">Email: </label><br>
-   <input type="text" placeholder="escribir email"> <br>
+        <form action="">
+          <label>Nombre: </label><br />
+          <input type="text" placeholder="escribir nombre" /> <br />
 
-   <label for="">Cuidad :</label><br>
-   <input type="email" placeholder="escribir cuidad"> <br><br>
+          <label for="">Email: </label><br />
+          <input type="text" placeholder="escribir email" /> <br />
 
-   <textarea name="Message" rows="8" cols="35"></textarea><br>
-   <label>mensaje</label><br><br>
-   <input type="submit"> <br>
+          <label for="">Cuidad :</label><br />
+          <input type="email" placeholder="escribir cuidad" /> <br /><br />
 
+          <textarea name="Message" rows="8" cols="35"></textarea><br />
+          <label>mensaje</label><br /><br />
+          <input type="submit" /> <br />
+        </form>
+      </div>
+    </div>
 
-</body>
-
+    <footer>
+      Copyright 2023 - Animalada - Diseñado por Grupo 40 – Jujuy – República
+      Argentina
+    </footer>
+  </body>
 </html>
