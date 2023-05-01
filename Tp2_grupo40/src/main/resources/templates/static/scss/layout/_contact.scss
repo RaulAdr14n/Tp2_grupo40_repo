@@ -1,0 +1,57 @@
+.contact__container {
+  position: relative;
+  width: 100%;
+  background-color: $white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.img__contact {
+  width: 50%;
+  position: relative;
+}
+
+.img__contact img {;
+  width: 100%;
+}
+
+.form__contact {
+  padding: 2rem;
+  width: 50%;
+}
+
+.form__contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__contact label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form__contact input,
+.form__contact textarea {
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form__contact input:focus,
+.form__contact textarea:focus {
+  outline: none;
+  border-color: #DC3C4D;
+}
+
+.form__contact textarea {
+  height: 150px;
+}
+
