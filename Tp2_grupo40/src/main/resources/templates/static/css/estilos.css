@@ -705,3 +705,68 @@ body:before {
   font-family: monospace;
   content: "Error: Invalid CSS after \"...layout/service\"\": expected \"{\", was \";\"\A         on line 13 of C:\Users\Raul Hernandez\git\Tp2_grupo40_repo\Tp2_grupo40\src\main\resources\templates\static\scss\style.scss\A \A 8: @import \"layout/footer\";\A 9: @import \"layout/heroIndex\";\A 10: @import \"layout/welcome\";\A 11: @import \"layout/aboutus\";\A 12: <<<<<<< HEAD\A 13: @import \"layout/service\";\A 14: =======\A 15: @import \"layout/consejos\";\A 16: @import \"layout/products\";\A 17: \A 18: >>>>>>> branch 'css' of https://github.com/RaulAdr14n/Tp2_grupo40_repo.git"; }
 
+
+.products__container h6 {
+  color: #222326;
+  font-family: "DM Sans", sans-serif;
+  text-align: justify;
+  padding: 0.5rem;
+}
+
+.contact__container {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.img__contact {
+  width: 50%;
+  position: relative;
+}
+
+.img__contact img {
+  width: 100%;
+}
+
+.form__contact {
+  padding: 2rem;
+  width: 50%;
+}
+
+.form__contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__contact label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form__contact input,
+.form__contact textarea {
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form__contact input:focus,
+.form__contact textarea:focus {
+  outline: none;
+  border-color: #DC3C4D;
+}
+
+.form__contact textarea {
+  height: 150px;
+}
+
