@@ -1,3 +1,4 @@
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -661,3 +662,46 @@ aside p {
   width: 50%;
   margin: 1rem auto 1rem auto;
 }
+=======
+/*
+Error: Invalid CSS after "...layout/service"": expected "{", was ";"
+        on line 13 of C:\Users\Raul Hernandez\git\Tp2_grupo40_repo\Tp2_grupo40\src\main\resources\templates\static\scss\style.scss
+
+8: @import "layout/footer";
+9: @import "layout/heroIndex";
+10: @import "layout/welcome";
+11: @import "layout/aboutus";
+12: <<<<<<< HEAD
+13: @import "layout/service";
+14: =======
+15: @import "layout/consejos";
+16: @import "layout/products";
+17: 
+18: >>>>>>> branch 'css' of https://github.com/RaulAdr14n/Tp2_grupo40_repo.git
+
+Backtrace:
+C:\Users\Raul Hernandez\git\Tp2_grupo40_repo\Tp2_grupo40\src\main\resources\templates\static\scss\style.scss:13
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+F:/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+F:/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+F:/Koala/bin/sass:22:in `load'
+F:/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...layout/service\"\": expected \"{\", was \";\"\A         on line 13 of C:\Users\Raul Hernandez\git\Tp2_grupo40_repo\Tp2_grupo40\src\main\resources\templates\static\scss\style.scss\A \A 8: @import \"layout/footer\";\A 9: @import \"layout/heroIndex\";\A 10: @import \"layout/welcome\";\A 11: @import \"layout/aboutus\";\A 12: <<<<<<< HEAD\A 13: @import \"layout/service\";\A 14: =======\A 15: @import \"layout/consejos\";\A 16: @import \"layout/products\";\A 17: \A 18: >>>>>>> branch 'css' of https://github.com/RaulAdr14n/Tp2_grupo40_repo.git"; }
+

@@ -2,28 +2,42 @@
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#DC3C4D" />
   <!--  icon  -->
   <link rel="icon" href="static/images/icon.svg" />
   <!--  fonts  -->
-  <link href="https://fonts.cdnfonts.com/css/kollektif" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-
   <!--  styles  -->
   <link rel="stylesheet" href="static/css/estilos.css" />
   <title>Productos</title>
 </head>
 
 <body>
-
-  <h1>PRODUCTOS</h1><br>
+  <header class="header__container">
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+        <li><a href="consejos.html">CONSEJOS DE SALUD</a></li>
+        <li><a href="servicio.html">SERVICIOS DE PASEOS</a></li>
+        <li><a href="sucursales.html">SUCURSALES</a></li>
+        <li><a href="contactanos.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="products__container">
+  <h1>PRODUCTOS</h1>
   <h2>TODO LO QUE TU MASCOTA NECESITA</h2>
+  <div class="productsDog__img">
+  <img src="static/images/perro_con_buzo.png" alt="pero con un buzo">
+</div>
 
-  <h2>Alimentos</h2>
+  <h3>Alimentos</h3>
 
   <p>Desde sus dias como cachorros hasta sus años como adultos mayores, nuestra nutrición comienza marcando diferencias
     que puedes ver, sentir y en las que puedes confiar.</p>
@@ -72,7 +86,7 @@
     </tr>
   </table>
 
-  <h2>Salud</h2>
+  <h3>Salud</h3>
   <p>Al igual que los humanos, los animales y todos los tipos de ellos necesitan una buena higiene tanto para su salud
     animal como para el resto de animales y personas. Ellos tienen la misma necesidad de estar cuidados y limpios que
     nosotros.</p>
@@ -110,7 +124,7 @@
   </table>
 
 
-  <h2>Accesorios</h2>
+  <h3>Accesorios</h3>
   <p>Ellos se lo merecen todo. Perros, gatos, roedores, pájaros… Organiza a tu mascota un rincón con encanto y
     demuéstrale
     lo mucho que te importa cuidándole con los accesorios adecuados.</p>
@@ -126,8 +140,11 @@
       </th>
     </figcaption>
   </figure>
-
-
+</div>
+  <footer>
+    Copyright 2023 - Animalada - Diseñado por Grupo 40 – Jujuy – República
+    Argentina
+  </footer>
 </body>
 
 </html>
