@@ -13,6 +13,11 @@
   background-color: #F8C000;
   color: #004A98;
 }
+html {
+	max-width: 1440px;
+  background-color: #DC3C4D;
+  margin: auto;
+}
 
 .hidden {
   display: none;
@@ -24,7 +29,9 @@ body {
   font-weight: 400;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Lexend Deca", sans-serif;
 }
 
@@ -61,7 +68,7 @@ h1, h2, h3 {
 
 footer {
   position: relative;
-  width: 75%;
+  width:100%;
   padding: 1rem;
   margin: auto;
   background-color: #FFFFFF;
@@ -300,11 +307,13 @@ aside p {
   flex-direction: column;
   margin: auto;
 }
+
 .sucursales__container h1 {
   color: #DC3C4D;
   text-align: center;
   margin: 1rem auto 1rem auto;
 }
+
 .sucursales__container h2 {
   color: #37383c;
   text-align: center;
@@ -321,11 +330,13 @@ aside p {
   flex-direction: column;
   margin: auto;
 }
+
 .sucursal__info h2 {
   color: #F8C000;
   text-align: justify;
   margin: 1rem auto 1rem auto;
 }
+
 .sucursal__info h4 {
   color: #FFFFFF;
   text-align: justify;
@@ -334,6 +345,7 @@ aside p {
   font-size: 1.3rem;
   font-weight: 700;
 }
+
 .sucursal__info p {
   color: #FFFFFF;
   line-height: 2rem;
@@ -398,7 +410,7 @@ aside p {
   position: relative;
   width: 100%;
   padding: 1rem;
-  background-color: .horario__container white;
+  background-color: white;
   position: relative;
   display: column;
   flex-direction: row;
@@ -415,11 +427,14 @@ aside p {
   background-color: #F8C000;
   border: 1px solid #000000;
 }
+
 .horario__container table th {
   background-color: #F4592F;
 }
-.horario__container table th, .horario__container table td {
-  align-text: center;
+
+.horario__container table th,
+.horario__container table td {
+  text-align: center;
   align-self: center;
   border: 1px solid #000000;
 }
@@ -427,9 +442,11 @@ aside p {
 .paseadores__container {
   padding: 6rem;
 }
+
 .paseadores__container h3 {
   color: #004A98;
 }
+
 .paseadores__container p {
   line-height: 2rem;
 }

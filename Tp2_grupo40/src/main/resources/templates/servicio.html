@@ -1,173 +1,139 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="theme-color" content="#DC3C4D" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      <link
-      rel="icon"
-      href="static/images/icon.svg"
-    />
-    <!--  fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!--  styles  -->
-    <link rel="stylesheet" href="static/css/estilos.css" />
-    <title>Servicio de paseos</title>
-  </head>
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
 
-  <body>
-    <header class="header__container">
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html">INICIO</a></li>
-          <li><a href="productos.html">PRODUCTOS</a></li>
-          <li><a href="consejos.html">CONSEJOS DE SALUD</a></li>
-          <li><a href="servicio.html">SERVICIOS DE PASEOS</a></li>
-          <li><a href="sucursales.html">SUCURSALES</a></li>
-          <li><a href="contactanos.html">CONTACTO</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="service__container" id="Paseo">
-      <div class="textService__container">
-        <h1>Servicios de paseos de mascotas</h1>
-        <p>
-          Ofrecemos un servicio de paseos de mascotas para dueños que no tienen
-          tiempo para sacar a pasear a sus perros o gatos. Nuestro equipo de
-          paseadores profesionales garantiza que su mascota recibirá el
-          ejercicio y la atención que necesita mientras usted se concentra en
-          sus responsabilidades diarias Nuestro equipo conformado por Benito,
-          Nahuel, Cesar y Romina. Mantendran a sus peludos amigos bien
-          ejercitados, confie en nosotros ¡reserve su turno hoy! Nuestros
-          amplios horarios se ajustarán a sus necesidades
-        </p>
-      </div>
-      <div class="img__dog">
-        <img src="static/images/cuidador.png" alt="cuidador con perro" />
-      </div>
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#DC3C4D" />
+  <!--  icon  -->
+  <link rel="icon" href="static/images/icon.svg" />
+  <!--  fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!--  styles  -->
+  <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+  <title>Servicio de paseos</title>
+</head>
 
-    <div class="horario__container">
-      <table border="1">
-        <tr>
-          <th>Día</th>
-          <th>Lunes</th>
-          <th>Martes</th>
-          <th>Miércoles</th>
-          <th>Jueves</th>
-          <th>Viernes</th>
-          <th>Sabado</th>
-        </tr>
-        <tr>
-          <td>Horario</td>
-          <td>9 a 12 - 16 a 18</td>
-          <td>9 a 12 - 16 a 18</td>
-          <td>9 a 12 - 16 a 18</td>
-          <td>9 a 12 - 16 a 18</td>
-          <td>9 a 12 - 16 a 18</td>
-          <td>9 a 12</td>
-        </tr>
-        <tr>
-          <td>Paseador</td>
-          <td>Benito</td>
-          <td>Romina</td>
-          <td>Cesar</td>
-          <td>Benito</td>
-          <td>Nahuel</td>
-          <td>Romina</td>
-        </tr>
-      </table>
+<body>
+  <header th:replace="layouts/header :: header"></header>
+
+  <div class="service__container" id="Paseo">
+    <div class="textService__container">
+      <h1>Servicios de paseos de mascotas</h1>
+      <p>
+        Ofrecemos un servicio de paseos de mascotas para dueños que no tienen
+        tiempo para sacar a pasear a sus perros o gatos. Nuestro equipo de
+        paseadores profesionales garantiza que su mascota recibirá el
+        ejercicio y la atención que necesita mientras usted se concentra en
+        sus responsabilidades diarias Nuestro equipo conformado por Benito,
+        Nahuel, Cesar y Romina. Mantendrán a sus peludos amigos bien
+        ejercitados, confíe en nosotros ¡reserve su turno hoy! Nuestros
+        amplios horarios se ajustarán a sus necesidades
+      </p>
     </div>
-    <div class="paseadores__container">
-      <h3>Nuestros paseadores</h3>
-      <table>
-        <tr>
-          <td>
-            <img
-              src="../templates/static/images/benito.JPG"
-              alt="Benito"
-              class="profile__pic"
-            />
-          </td>
-          <td>
-            <h3>Benito</h3>
-            <p>
-              Apasionado por la naturaleza y los animales, Benito es una persona
-              muy amigable y carismática. Le encanta pasear y jugar con perros
-              de todas las edades y tamaños. Su dedicación y atención a los
-              detalles lo convierten en un excelente cuidador de mascotas.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="../templates/static/images/romina.JPG"
-              alt="Romina"
-              class="profile__pic"
-            />
-          </td>
-          <td>
-            <h3>Romina</h3>
-            <p>
-              Siempre ha sido una amante de los animales, y ha trabajado como
-              voluntaria en refugios de animales durante muchos años. Romina
-              tiene un enfoque cariñoso y paciente con los perros, lo que hace
-              que se sientan cómodos y seguros. Le gusta mucho caminar y es muy
-              comprometida con el bienestar de las mascotas.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="../templates/static/images/cesar.JPG"
-              alt="Cesar"
-              class="profile__pic"
-            />
-          </td>
-          <td>
-            <h3>Cesar</h3>
-            <p>
-              Con experiencia en el entrenamiento de perros, Cesar sabe cómo
-              cuidar y educar a las mascotas de manera adecuada. Es una persona
-              confiable y responsable, y siempre está dispuesto a adaptarse a
-              las necesidades y preferencias de cada perro.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="../templates/static/images/nahuel.JPG"
-              alt="Nahuel"
-              class="profile__pic"
-            />
-          </td>
-          <td>
-            <h3>Nahuel</h3>
-            <p>
-              Amante de los deportes y la vida activa, Nahuel es el compañero
-              ideal para pasear perros en la ciudad o en áreas rurales. Su
-              energía y entusiasmo contagian a los perros, y es un experto en
-              hacer que se diviertan mientras reciben el ejercicio que
-              necesitan.
-            </p>
-          </td>
-        </tr>
-      </table>
+    <div class="img__dog">
+      <img th:src="@{/images/cuidador.png}" alt="cuidador con perro" />
     </div>
-    <footer>
-      Copyright 2023 - Animalada - Diseñado por Grupo 40 – Jujuy – República
-      Argentina
-    </footer>
-  </body>
+  </div>
+
+  <div class="horario__container">
+    <table border="1">
+      <tr>
+        <th>Día</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+        <th>Sábado</th>
+      </tr>
+      <tr>
+        <td>Horario</td>
+        <td>9 a 12 - 16 a 18</td>
+        <td>9 a 12 - 16 a 18</td>
+        <td>9 a 12 - 16 a 18</td>
+        <td>9 a 12 - 16 a 18</td>
+        <td>9 a 12 - 16 a 18</td>
+        <td>9 a 12</td>
+      </tr>
+      <tr>
+        <td>Paseador</td>
+        <td>Benito</td>
+        <td>Romina</td>
+        <td>Cesar</td>
+        <td>Benito</td>
+        <td>Nahuel</td>
+        <td>Romina</td>
+      </tr>
+    </table>
+  </div>
+  <div class="paseadores__container">
+    <h3>Nuestros paseadores</h3>
+    <table>
+      <tr>
+        <td>
+          <img th:src="@{/images/benito.JPG}" alt="Benito" class="profile__pic" />
+        </td>
+        <td>
+          <h3>Benito</h3>
+          <p>
+            Apasionado por la naturaleza y los animales, Benito es una persona
+            muy amigable y carismática. Le encanta pasear y jugar con perros
+            de todas las edades y tamaños. Su dedicación y atención a los
+            detalles lo convierten en un excelente cuidador de mascotas.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img th:src="@{/static/images/romina.JPG}" alt="Romina" class="profile__pic" />
+        </td>
+        <td>
+          <h3>Romina</h3>
+          <p>
+            Siempre ha sido una amante de los animales, y ha trabajado como
+            voluntaria en refugios de animales durante muchos años. Romina
+            tiene un enfoque cariñoso y paciente con los perros, lo que hace
+            que se sientan cómodos y seguros. Le gusta mucho caminar y es muy
+            comprometida con el bienestar de las mascotas.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img th:src="@{/images/cesar.JPG}" alt="Cesar" class="profile__pic" />
+        </td>
+        <td>
+          <h3>Cesar</h3>
+          <p>
+            Con experiencia en el entrenamiento de perros, Cesar sabe cómo
+            cuidar y educar a las mascotas de manera adecuada. Es una persona
+            confiable y responsable, y siempre está dispuesto a adaptarse a
+            las necesidades y preferencias de cada perro.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img th:src="@{/images/nahuel.JPG}" alt="Nahuel" class="profile__pic" />
+        </td>
+        <td>
+          <h3>Nahuel</h3>
+          <p>
+            Amante de los deportes y la vida activa, Nahuel es el compañero
+            ideal para pasear perros en la ciudad o en áreas rurales. Su
+            energía y entusiasmo contagian a los perros, y es un experto en
+            hacer que se diviertan mientras reciben el ejercicio que
+            necesitan.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <footer th:replace="layouts/footer :: footer"></footer>
+</body>
+
 </html>
