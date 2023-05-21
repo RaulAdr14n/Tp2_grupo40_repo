@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" lang="es">
+
 <head>
     <meta charset="utf-8" />
     <meta name="theme-color" content="#DC3C4D" />
@@ -9,34 +10,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
     <!--  styles  -->
     <link rel="stylesheet" th:href="@{/css/estilos.css}" />
     <title>Nuevo Producto</title>
 </head>
+
 <body>
     <header th:replace="layouts/header :: header"></header>
     <div class="form__contact">
-    <h1>Nuevo Producto</h1>
-    
-    <!-- Formulario de ingreso de datos del nuevo producto -->
-    <form th:action="@{/producto}" method="post" th:object="${producto}">
-        <label>Nombre:</label>
-        <input type="text" th:field="*{nombre}" />
-        <br/>
-        
-        <label>Precio:</label>
-        <input type="number" th:field="*{precio}" />
-        <br/>
-        
-        <label>Descripción:</label>
-        <textarea th:field="*{descripcion}"></textarea>
-        <br/>
-        
-        <button type="submit">Guardar</button>
-    </form>
+        <h1>Nuevo Producto</h1>
+
+        <!-- Formulario de ingreso de datos del nuevo producto -->
+        <form th:action="@{/producto}" method="post" th:object="${producto}">
+            <label>Nombre:</label>
+            <input type="text" th:field="*{nombre}" />
+            <br />
+
+            <label>Precio:</label>
+            <input type="number" th:field="*{precio}" />
+            <br />
+
+            <label>Descripción:</label>
+            <textarea th:field="*{descripcion}"></textarea>
+            <br />
+
+            <button type="submit">Guardar</button>
+        </form>
     </div>
     <footer th:replace="layouts/footer :: footer"></footer>
 </body>
+
 </html>
