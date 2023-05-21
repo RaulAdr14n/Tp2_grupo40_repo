@@ -1,80 +1,94 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <title>Animalada - Tienda de Mascota</title>
+  <title>Animalada - Tienda de Mascotas</title>
+  <link />
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#DC3C4D" />
+  <!--  icon  -->
+  <link rel="icon" th:href="@{/images/icon.svg}" />
+  <!--  fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!--  styles  -->
+  <link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}" />
 </head>
 
 <body>
-    <header>
-        <h1>Animalada</h1>
-        <img src="static/images/animalada.png" alt="Imagen de la Tienda de Mascota" title="Logo Animalda">
-    </header>
+  <header th:replace="layouts/header :: header"></header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="consejos.html">Consejos de Salud</a></li>
-            <li><a href="servicio.html">Servicios de Paseos</a></li>
-            <li><a href="sucursales.html">Sucursales</a></li>
-            <li><a href="contactanos.html">Contáctenos</a></li>
-        </ul>
-    </nav>
-
-    <section>
-        <h2>¡Bienvenidos a Animalada!</h2>
-
-        <article>
-            <h2>Nuestros servicios</h2>
-            <p>
-                Bienvenidos a Animalada, la tienda de mascotas donde encontrarás todo
-                lo que necesitas para consentir y cuidar a tus amigos peludos.
-                Ofrecemos servicios de paseos, peluquería y cuidados especiales, y
-                contamos con varias sucursales en la ciudad para tu comodidad. En
-                Animaladas, creemos que tus mascotas merecen lo mejor, por eso
-                trabajamos cada día para ofrecerte productos y servicios de alta
-                calidad y atención cercana y amigable. ¡Te esperamos para hacer de la
-                vida de tus mascotas una verdadera fiesta de diversión y amor!
-            </p>
-        </article>
-
-
-        <article>
-            <h2>¡Conoce más sobre Animaladas!</h2>
-            <p>
-                En Animalada somos un equipo apasionado por los animales, comprometido
-                en ofrecerte los mejores productos y servicios para el cuidado y
-                diversión de tus mascotas. Contamos con expertos en cada una de
-                nuestras sucursales, quienes te brindarán atención cercana y amigable
-                para que tengas la mejor experiencia en Animalada. ¡Gracias por
-                confiar en nosotros para cuidar de tus amigos peludos!
-            </p>
-        </article>
+  <!-- main -->
+  <div class="topContainers">
+    <!-- hero -->
+    <section class="heading__container">
+      <div class="tittle__container">
+        <img th:src="@{/images/icon.svg}" alt="Imagen de la Tienda de Mascota" title="Logo Animalada" />
+        <h1>animalada</h1>
+        <h2>TIENDA DE MASCOTA</h2>
+        <a th:href="@{productos}" class="button__product">PRODUCTOS➝</a>
+      </div>
     </section>
+  </div>
 
-    <aside>
-        <h3>¡Conoce nuestro gran equipo!</h3>
+  <section class="welcome__container" id="Bienvenidos">
+    <div class="text__container">
+      <h2>¡bienvenidos a animalada!</h2>
+      <article>
+        <h3>nuestros servicios</h3>
         <p>
-            En Animalada, nuestra empresa fundada por Conrado, Martin, Raúl e
-            Ingrid, trabajamos juntos para ofrecerte los mejores servicios para tus
-            mascotas. Ingrid lidera nuestro equipo como administradora, asegurando
-            que todo funcione sin problemas. Raúl y Maxi se encargan de mantener
-            nuestra base de datos actualizada, mientras que Martín se enfoca en
-            liderar al equipo de atención al público para brindar una atención al
-            cliente excepcional. Conrado es nuestro especialista en redes sociales y
-            siempre está compartiendo información interesante y divertida sobre
-            nuestros amigos peludos. Juntos, estamos comprometidos en hacer que la
-            vida de tus mascotas sea lo más feliz y saludable posible. ¡Ven a
-            visitarnos y conoce al equipo de Animalada hoy mismo!
+          Bienvenidos a Animalada, la tienda de mascotas donde encontrarás
+          todo lo que necesitas para consentir y cuidar a tus amigos peludos.
+          Ofrecemos servicios de paseos, peluquería y cuidados especiales, y
+          contamos con varias sucursales en la ciudad para tu comodidad. En
+          Animaladas, creemos que tus mascotas merecen lo mejor, por eso
+          trabajamos cada día para ofrecerte productos y servicios de alta
+          calidad y atención cercana y amigable. ¡Te esperamos para hacer de
+          la vida de tus mascotas una verdadera fiesta de diversión y amor!
         </p>
+      </article>
+      <article>
+        <h3>¡conoce más sobre animaladas!</h3>
+        <p>
+          En Animalada somos un equipo apasionado por los animales,
+          comprometido en ofrecerte los mejores productos y servicios para el
+          cuidado y diversión de tus mascotas. Contamos con expertos en cada
+          una de nuestras sucursales, quienes te brindarán atención cercana y
+          amigable para que tengas la mejor experiencia en Animalada. ¡Gracias
+          por confiar en nosotros para cuidar de tus amigos peludos!
+        </p>
+      </article>
+    </div>
+    <div class="img__cat">
+      <img th:src="@{/images/gato.png}" alt="gato mirando para arriba" />
+    </div>
+  </section>
+  <div class="aboutus__container">
+    <div class="aboutus__title">
+      <h1>conocé más</h1>
+      <a th:href="@{contactanos}" class="button__contact">CONTÁCTENOS➝</a>
+    </div>
+    <aside>
+      <h3>¡Conoce nuestro gran equipo!</h3>
+      <p>
+        En Animalada, nuestra empresa fundada por Conrado, Martin, Raúl e
+        Ingrid, trabajamos juntos para ofrecerte los mejores servicios para
+        tus mascotas. Ingrid lidera nuestro equipo como administradora,
+        asegurando que todo funcione sin problemas. Raúl y Maxi se encargan de
+        mantener nuestra base de datos actualizada, mientras que Martín se
+        enfoca en liderar al equipo de atención al público para brindar una
+        atención al cliente excepcional. Conrado es nuestro especialista en
+        redes sociales y siempre está compartiendo información interesante y
+        divertida sobre nuestros amigos peludos. Juntos, estamos comprometidos
+        en hacer que la vida de tus mascotas sea lo más feliz y saludable
+        posible. ¡Ven a visitarnos y conoce al equipo de Animalada hoy mismo!
+      </p>
     </aside>
-
-    <footer>
-        Copyright 2023 - Animalada - Diseñado por Grupo 40 – Jujuy – República
-        Argentina
-    </footer>
+  </div>
+  <footer th:replace="layouts/footer :: footer"></footer>
 </body>
 
 </html>

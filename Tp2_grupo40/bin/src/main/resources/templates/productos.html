@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#DC3C4D" />
+  <!--  icon  -->
+  <link rel="icon" href="static/images/icon.svg" />
+  <!--  fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!--  styles  -->
+  <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+  <title>Productos</title>
+</head>
+
+<body>
+  <header th:replace="layouts/header :: header"></header>
+  <div class="products__container">
+    <h1>PRODUCTOS</h1>
+    <h2>TODO LO QUE TU MASCOTA NECESITA</h2>
+    <div class="productsDog__img">
+      <img th:src="@{/images/perro_con_buzo.png}" alt="pero con un buzo">
+    </div>
+
+    <h3>Alimentos</h3>
+
+    <p>Desde sus días como cachorros hasta sus años como adultos mayores, nuestra nutrición comienza marcando
+      diferencias
+      que puedes ver, sentir y en las que puedes confiar.</p>
+
+    <table>
+      <tr>
+        <td>
+          <figure>
+            <img th:src="@{/images/alimentoperro1.jpg}" alt="Imagen de productos/alimentos">
+            <figcaption>
+        <th>
+          <h6>ROYAL CANIN<h6>
+        </th>
+        <th>
+          <h6>ADULTO<h6>
+        </th>
+        </figcapton>
+        </figure>
+        </td>
+
+        <td>
+          <figure>
+            <img th:src="@{images/alimentoperro2.jpg}" alt="Imagen de productos/alimentos">
+            <figcapton>
+        <th>
+          <h6>ROYAL CANIN<h6>
+        </th>
+        <th>
+          <h6>JUNIOR<h6>
+        </th>
+        </figure>
+        </td>
+
+        <td>
+          <figure>
+            <img th:src="@{/images/alimentoperro3.jpg}" alt="Imagen de productos/alimentos">
+            <figcapton>
+        <th>
+          <h6>ROYAL CANIN<h6>
+        </th>
+        <th>
+          <h6>CACHORRO<h6>
+        </th>
+        </figure>
+        </td>
+      </tr>
+    </table>
+
+    <h3>Salud</h3>
+    <p>Al igual que los humanos, los animales y todos los tipos de ellos necesitan una buena higiene tanto para su salud
+      animal como para el resto de animales y personas. Ellos tienen la misma necesidad de estar cuidados y limpios que
+      nosotros.</p>
+    <table>
+      <tr>
+        <td>
+          <figure>
+            <img th:src="@{/images/repelente1.jpg}" alt="Imagen de productos/salud">
+            <figcapton>
+        <th>
+          <h6>ADVANTIX SPOT ON<h6>
+        </th>
+        <th>
+          <h6>PERRO4-10KG<h6>
+        </th>
+        </figure>
+        </td>
+
+        <td>
+          <figure>
+            <img th:src="@{/images/repelente2.jpg}" alt="Imagen de productos/salud">
+            <figcaption>
+        <th>
+          <h6>ADVOCATE CANINO<h6>
+        </th>
+        <th>
+          <h6>10-25 KG<h6>
+        </th>
+        </figcaption>
+
+        </figure>
+        </td>
+      </tr>
+
+    </table>
+
+
+    <h3>Accesorios</h3>
+    <p>Ellos se lo merecen todo. Perros, gatos, roedores, pájaros… Organiza a tu mascota un rincón con encanto y
+      demuéstrale
+      lo mucho que te importa cuidándolo con los accesorios adecuados.</p>
+
+    <figure>
+      <img th:src="@{/images/accesorios.jpg}" alt="Imagen de productos/accesorios">
+      <figcaption>
+        <th>
+          <h6>SER COLLAR/ARNÉS<h6>
+        </th>
+        <th>
+          <h6>TELAS PERSONALIZADAS<h6>
+        </th>
+      </figcaption>
+    </figure>
+  </div>
+  <footer th:replace="layouts/footer :: footer"></footer>
+</body>
+
+</html>
