@@ -31,10 +31,10 @@
       <p>Sábados 9:00 hs a 12:00 hs</p>
 
       <ul>
-        <li><a th:href="animalada@gmail.com">animalada@gmail.com </a></li>
-        <li><a th:href="www.facebook.com">facebook</a></li>
-        <li><a th:href="www.instagram.com">instagram</a></li>
-        <li><a th:href="www.twiter.com">twitter</a></li>
+        <li><a th:href="mailto:animalada@gmail.com">animaladagmail.com </a></li>
+        <li><a th:href="https://www.facebook.com">facebook</a></li>
+        <li><a th:href="https://www.instagram.com">instagram</a></li>
+        <li><a th:href="https://www.twitter.com">twitter</a></li>
       </ul>
 
       <form th:action="@{/}" method="post">
@@ -45,7 +45,7 @@
         <input type="text" placeholder="escribir email" th:field="*{email}" /><br />
 
         <label for="">Cuidad :</label><br />
-        <input type="email" placeholder="escribir cuidad" th:field="*{ciudad}" /><br /><br />
+        <input type="text" placeholder="escribir cuidad" th:field="*{ciudad}" /><br /><br />
 
         <textarea name="Message" rows="8" cols="35" th:field="*{mensaje}"></textarea><br />
         <label>mensaje</label><br /><br />
