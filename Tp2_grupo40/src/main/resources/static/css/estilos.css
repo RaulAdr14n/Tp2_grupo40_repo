@@ -15,7 +15,7 @@
 }
 html {
 	max-width: 1440px;
-  background-color: #DC3C4D;
+  background-color: #FFFFFF;
   margin: auto;
 }
 
@@ -616,6 +616,7 @@ aside p {
 }
 
 .form__contact {
+  margin: auto;
   padding: 2rem;
   width: 50%;
 }
