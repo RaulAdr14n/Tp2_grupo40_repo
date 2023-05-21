@@ -1,9 +1,6 @@
-package ar.edu.unju.fi.controller.model;
+package ar.edu.unju.fi.model;
 
-import org.springframework.stereotype.Controller;
-
-@Controller
-public class ProductosController {
+public class Productos{
 	private String nombre;
 	private int codigo;
 	private double precio;
@@ -11,7 +8,7 @@ public class ProductosController {
 	private int descuento;
 
 	// Constructor parametrizado
-	public ProductosController(String nombre, int codigo, double precio, String categoria, int descuento) {
+	public Productos(String nombre, int codigo, double precio, String categoria, int descuento) {
 		this.nombre = nombre;
 		this.codigo = codigo;
 		this.precio = precio;
