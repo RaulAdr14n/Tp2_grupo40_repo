@@ -130,6 +130,20 @@
         </th>
       </figcaption>
     </figure>
+    <div class="aboutus__title">
+      <h1>nuevo producto</h1>
+      <a th:href="@{nuevo_producto}" class="button__contact">AGREGAR➝</a>
+      <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+        <tr th:each="producto : ${productos}">
+            <td th:text="${producto.nombre}"></td>
+            <td th:text="${producto.precio}"></td>
+        </tr>
+    </table>
+    </div>
   </div>
   <footer th:replace="layouts/footer :: footer"></footer>
 </body>
