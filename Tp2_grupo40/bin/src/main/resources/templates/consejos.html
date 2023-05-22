@@ -1,64 +1,140 @@
 <!DOCTYPE html>
-<html lang= "es">
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+
 <head>
-<meta charset="utf-8">
-<title>Consejos de Salud</title>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#DC3C4D" />
+  <!--  icon  -->
+  <link rel="icon" href="static/images/icon.svg" />
+  <!--  fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!--  styles  -->
+  <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+  <title>Consejos de Salud</title>
 </head>
+
 <body>
-	<header>
-		<h1>Consejos de salud para nuestras mascotas</h1>
-		<h2>A continuación brindamos unos cuantos consejos tanto de salud mental emocional y física para nuestras mascotas</h2>
-		<img alt="Imagen decorativa de perritos" src="static/images/segurmania_mascotas_destacada.jpg">
-		<ul>
-			<li><h2>1) Visita regularmente al veterinario!!:</h2> Es importante que lleves a tu 
-				mascota a chequeos regulares para asegurarte de que está en buena salud y detectar 
-				cualquier problema a tiempo.</li>
-				
-			<li><h2>2) Mantén el peso adecuado!!: </h2>El sobrepeso y la obesidad pueden causar una 
-				serie de problemas de salud en las mascotas, como diabetes, problemas de 
-				articulaciones y enfermedades del corazón. Asegúrate de que tu mascota tenga una 
-				dieta equilibrada y realiza suficiente actividad física.</li>
-							
-			<li><h2>3) Vacuna a tu mascota!!:</h2> Las vacunas son una parte importante del cuidado 
-				preventivo de la salud de tu mascota. Asegúrate de mantener al día el calendario 
-				de vacunación de tu mascota.</li>
-				
-			<li><h2>4) Proporciona una alimentación saludable!!:</h2> La alimentación de tu mascota 
-				debe ser balanceada y adecuada para su edad, tamaño y necesidades nutricionales. 
-				Consulta con un veterinario para obtener recomendaciones específicas.</li>
-				
-			<li><h2>5) Ejercicio diario!!:</h2> El ejercicio es importante para mantener a tu mascota 
-				en buena forma física y mental. Asegúrate de proporcionar suficiente actividad 
-				diaria para mantener a tu mascota sana y feliz</li>
-				
-			<li><h2>6) Mantén una buena higiene!!:</h2> Mantener una buena higiene es fundamental 
-				para la salud de tu mascota. Baña a tu mascota regularmente y cepilla su 
-				pelaje para evitar problemas de piel y para reducir la cantidad de pelo que 
-				ingiere cuando se lame.</li>
-				
-			<li><h2>7)Control de parásitos</h2> Las pulgas, garrapatas, gusanos y otros parásitos
-				pueden causar problemas de salud graves en las mascotas. Asegúrate de utilizar 
-				productos adecuados y seguir las instrucciones del veterinario para prevenir 
-				y controlar los parásitos.</li>
-				
-			<li><h2>8) Proporciona agua fresca!!:</h2> Tu mascota debe tener acceso constante a agua 
-				fresca y limpia para mantenerse hidratada y saludable.</li>
-				
-			<li><h2>9) Mantén la dentadura de tu mascota limpia!!:</h2> Los problemas dentales pueden 
-				ser una causa de dolor y enfermedad en las mascotas. Asegúrate de proporcionar 
-				una dieta adecuada y cepillar regularmente sus dientes para prevenir problemas 
-				dentales.</li>
-				
-			<li><h2>10) Proporciona un ambiente seguro!!:</h2> Asegúrate de que tu mascota esté segura 
-				en su entorno. Evita exponerla a sustancias tóxicas, asegúrate de que no tenga 
-				acceso a objetos peligrosos, y mantén la casa limpia y libre de objetos que puedan 
-				causar accidentes.</li>
-		</ul>
-		<img alt="Consejos" src="static/images/Recuadro-Consejos-web.jpg" width="600" height="500">
-		<h2>
-			Si deseas consultar o comunicarte te dejamos un numero de consultas para poder contactarte en caso de alguna emergencia, o alguna duda particular que tengas. Te responderán las personas mas capacitadas para comentar que ocurre con tu amada mascota!
-		</h2>
-			<h1>3874064403</h1>
-	</header>
+  <header th:replace="layouts/header :: header"></header>
+  <main>
+    <div class="tips__container">
+      <div class="textTips__container">
+        <h1>CONSEJOS DE SALUD PARA NUESTRAS MASCOTAS</h1>
+        <h2>
+          a continuación brindamos unos cuantos consejos tanto de salud mental
+          emocional y física para nuestras mascotas
+        </h2>
+        <img alt="Imagen decorativa de perritos" th:src="@{/images/perro_con_auriculares.png}" />
+        <ol>
+          <li>
+            <h3>1) Visita regularmente al veterinario</h3>
+            <p>
+              Es importante que lleves a tu mascota a chequeos regulares para
+              asegurarte de que está en buena salud y detectar cualquier
+              problema a tiempo.
+            </p>
+          </li>
+
+          <li>
+            <h3>2) Mantén el peso adecuado</h3>
+            <p>
+              El sobrepeso y la obesidad pueden causar una serie de problemas
+              de salud en las mascotas, como diabetes, problemas de
+              articulaciones y enfermedades del corazón. Asegúrate de que tu
+              mascota tenga una dieta equilibrada y realiza suficiente
+              actividad física.
+            </p>
+          </li>
+
+          <li>
+            <h3>3) Vacuna a tu mascota</h3>
+            <p>
+              Las vacunas son una parte importante del cuidado preventivo de
+              la salud de tu mascota. Asegúrate de mantener al día el
+              calendario de vacunación de tu mascota.
+            </p>
+          </li>
+
+          <li>
+            <h3>4) Proporciona una alimentación saludable</h3>
+            <p>
+              La alimentación de tu mascota debe ser balanceada y adecuada
+              para su edad, tamaño y necesidades nutricionales. Consulta con
+              un veterinario para obtener recomendaciones específicas.
+            </p>
+          </li>
+
+          <li>
+            <h3>5) Ejercicio diario</h3>
+            <p>
+              El ejercicio es importante para mantener a tu mascota en buena
+              forma física y mental. Asegúrate de proporcionar suficiente
+              actividad diaria para mantener a tu mascota sana y feliz
+            </p>
+          </li>
+
+          <li>
+            <h3>6) Mantén una buena higiene</h3>
+            <p>
+              Mantener una buena higiene es fundamental para la salud de tu
+              mascota. Baña a tu mascota regularmente y cepilla su pelaje para
+              evitar problemas de piel y para reducir la cantidad de pelo que
+              ingiere cuando se lame.
+            </p>
+          </li>
+
+          <li>
+            <h3>7)Control de parásitos</h3>
+            <p>
+              Las pulgas, garrapatas, gusanos y otros parásitos pueden causar
+              problemas de salud graves en las mascotas. Asegúrate de utilizar
+              productos adecuados y seguir las instrucciones del veterinario
+              para prevenir y controlar los parásitos.
+            </p>
+          </li>
+
+          <li>
+            <h3>8) Proporciona agua fresca</h3>
+            <p>
+              Tu mascota debe tener acceso constante a agua fresca y limpia
+              para mantenerse hidratada y saludable.
+            </p>
+          </li>
+
+          <li>
+            <h3>9) Mantén la dentadura de tu mascota limpia</h3>
+            <p>
+              Los problemas dentales pueden ser una causa de dolor y
+              enfermedad en las mascotas. Asegúrate de proporcionar una dieta
+              adecuada y cepillar regularmente sus dientes para prevenir
+              problemas dentales.
+            </p>
+          </li>
+
+          <li>
+            <h3>10) Proporciona un ambiente seguro</h3>
+            <p>
+              Asegúrate de que tu mascota esté segura en su entorno. Evita
+              exponerla a sustancias tóxicas, asegúrate de que no tenga acceso
+              a objetos peligrosos, y mantén la casa limpia y libre de objetos
+              que puedan causar accidentes.
+            </p>
+          </li>
+        </ol>
+        <h3>
+          Si deseas consultar o comunicarte te dejamos un numero de consultas
+          para poder contactarte en caso de alguna emergencia, o alguna duda
+          particular que tengas. Te responderán las personas mas capacitadas
+          para comentar que ocurre con tu amada mascota!
+        </h3>
+        <h1>3874064403</h1>
+      </div>
+    </div>
+  </main>
+  <footer th:replace="layouts/footer :: footer"></footer>
 </body>
+
 </html>

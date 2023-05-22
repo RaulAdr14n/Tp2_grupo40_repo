@@ -130,25 +130,6 @@
         </th>
       </figcaption>
     </figure>
-          <h1>Lista de Productos</h1>
-    
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Descripción</th>
-        </tr>
-        <!-- Itera sobre la lista de productos y muestra los valores de cada producto en la tabla -->
-        <tr th:each="producto : ${productos}">
-            <td th:text="${producto.nombre}"></td>
-            <td th:text="${producto.precio}"></td>
-            <td th:text="${producto.descripcion}"></td>
-        </tr>
-    </table>
-    <div>
-      <h1>Agregar nuevos productos</h1>
-      <a th:href="@{nuevo_producto}" class="button__contact">AGREGAR➝</a>
-    </div>
   </div>
   <footer th:replace="layouts/footer :: footer"></footer>
 </body>

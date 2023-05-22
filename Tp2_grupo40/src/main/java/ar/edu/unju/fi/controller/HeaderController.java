@@ -1,6 +1,7 @@
 package ar.edu.unju.fi.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -10,24 +11,28 @@ public class HeaderController {
 	public String getConsejosPage(){
 		return "consejos";
 	}
-	@RequestMapping(value = "/productos", method = RequestMethod.GET)
+	@GetMapping("/productos")
 	public String getProductosPage(){
 		return "productos";
 	}
-	@RequestMapping(value = "/servicio", method = RequestMethod.GET)
+	@GetMapping("/servicio")
 	public String getServicioPage(){
 		return "servicio";
 	}
-	@RequestMapping(value = "/sucursales", method = RequestMethod.GET)
+	@GetMapping("/sucursales")
 	public String getSucursalesPage(){
 		return "sucursales";
 	}
-	@RequestMapping(value = "/contactanos", method = RequestMethod.GET)
+	@GetMapping("/contactanos")
 	public String getContactanosPage(){
 		return "contactanos";
 	}
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	@GetMapping("/index")
 	public String getIndexPage(){
 		return "index";
+	}
+	@GetMapping("/nuevo_producto")
+	public String getNuevoProductoPage() {
+		return "nuevo_producto";
 	}
 }
