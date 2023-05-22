@@ -20,27 +20,24 @@
 <body>
     <header th:replace="layouts/header :: header"></header>
     <div class="form__contact">
-
         <h1>Nuevo Producto</h1>
 
         <!-- Formulario de ingreso de datos del nuevo producto -->
         <form th:action="@{/producto}" method="post" th:object="${producto}">
             <label>Nombre:</label>
-            <input type="text" field="*{nombre}" name="nombre" />
+            <input type="text" th:field="*{nombre}" />
             <br />
 
             <label>Precio:</label>
-            <input type="number" field="*{precio}" name="precio" />
+            <input type="number" th:field="*{precio}" />
             <br />
 
             <label>Descripción:</label>
-            <textarea field="*{descripcion}" name="descripcion"></textarea>
+            <textarea th:field="*{descripcion}"></textarea>
             <br />
 
-
-    <button type="submit">Guardar</button>
+            <button type="submit">Guardar</button>
+        </form>
     </div>
     <footer th:replace="layouts/footer :: footer"></footer>
 </body>
-
-</html>
