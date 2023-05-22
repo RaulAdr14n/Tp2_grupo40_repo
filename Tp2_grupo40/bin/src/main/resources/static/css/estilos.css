@@ -15,7 +15,7 @@
 }
 html {
 	max-width: 1440px;
-  background-color: #FFFFFF;
+  background-color: #DC3C4D;
   margin: auto;
 }
 
@@ -240,7 +240,6 @@ footer {
   align-items: center;
   align-content: center;
   justify-content: center;
-  margin: auto;
 }
 
 .aboutus__title h1 {
@@ -617,7 +616,6 @@ aside p {
 }
 
 .form__contact {
-  margin: auto;
   padding: 2rem;
   width: 50%;
 }

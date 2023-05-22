@@ -25,15 +25,15 @@
         <!-- Formulario de ingreso de datos del nuevo producto -->
         <form th:action="@{/producto}" method="post" th:object="${producto}">
             <label>Nombre:</label>
-            <input type="text" th:field="*{nombre}" />
+            <input type="text" field="*{nombre}" name="nombre"/>
             <br />
 
             <label>Precio:</label>
-            <input type="number" th:field="*{precio}" />
+            <input type="number" field="*{precio}" name="precio"/>
             <br />
 
             <label>Descripción:</label>
-            <textarea th:field="*{descripcion}"></textarea>
+            <textarea field="*{descripcion}" name="descripcion"></textarea>
             <br />
 
             <button type="submit">Guardar</button>
@@ -41,5 +41,3 @@
     </div>
     <footer th:replace="layouts/footer :: footer"></footer>
 </body>
-
-</html>
