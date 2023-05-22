@@ -1,60 +1,45 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org" lang="es">
+<html lang="es">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="theme-color" content="#DC3C4D" />
-  <!--  icon  -->
-  <link rel="icon" href="static/images/icon.svg" />
-  <!--  fonts  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <!--  styles  -->
-  <link rel="stylesheet" th:href="@{/css/estilos.css}" />
-  <title>Contáctenos</title>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
 </head>
-
 <body>
-  <header th:replace="layouts/header :: header"></header>
-  <div class="contact__container">
-    <div class="img__contact">
-      <img th:src="@{/images/bulldog.png}" alt="bulldog inglés en fondo rosado" />
-    </div>
-    <div class="form__contact">
-      <h1>Contáctenos</h1>
-      <p>Av Senador Perez n 1234, Numero de contacto: 3885178176</p>
-      <p>Abierto de :</p>
-      <p>Lunes a viernes de 9:00 hs a 12:30 hs y de 17:00 hs a 21:00 hs</p>
-      <p>Sábados 9:00 hs a 12:00 hs</p>
+ <div>
+   
+    <h1>Contáctenos</h1>
+     <p>Av Senador Perez n 1234, Numero de contacto: 3885178176</p>
+     <P>Abierto de :</P>      
+     <p>Lunes a viernes de 9:00 hs a 12:30 hs y de 17:00 hs a 21:00 hs</p>
+     <p>Sábados 9:00 hs a 12:00 hs</p>
+     <a href="animalada@gmail.com">animalada@gmail.com </a><br>
+     
 
-      <ul>
-        <li><a th:href="mailto:animalada@gmail.com">animaladagmail.com </a></li>
-        <li><a th:href="https://www.facebook.com">facebook</a></li>
-        <li><a th:href="https://www.instagram.com">instagram</a></li>
-        <li><a th:href="https://www.twitter.com">twitter</a></li>
-      </ul>
+     <ul>
+    
+     <li><a href="facebook">facebook</a></li>
+     <li><a href="instagram">instagram</a></li>
+     <li><a href="twiter">twitter</a></li>
+     
+     </ul>
+ </div>
+ 
+   
+    <form action=""></form>
+          <label >Nombre: </label><br>
+          <input type="text" placeholder="escribir nombre"> <br>
+          
+          <label for="">Email: </label><br>
+          <input type="text" placeholder="escribir email"> <br>
+          
+          <label for="">Cuidad :</label><br>
+          <input type="email" placeholder="escribir cuidad"> <br><br>          
+          
+          <textarea name="Message"  rows="8" cols="35"></textarea><br>
+          <label>mensaje</label><br><br>
+           <input type="submit"> <br>           
 
-      <form th:action="@{/}" method="post">
-        <label>Nombre: </label><br />
-        <input type="text" placeholder="escribir nombre" th:field="*{nombre}" /><br />
 
-        <label for="">Email: </label><br />
-        <input type="text" placeholder="escribir email" th:field="*{email}" /><br />
-
-        <label for="">Cuidad :</label><br />
-        <input type="text" placeholder="escribir cuidad" th:field="*{ciudad}" /><br /><br />
-
-        <textarea name="Message" rows="8" cols="35" th:field="*{mensaje}"></textarea><br />
-        <label>mensaje</label><br /><br />
-        <input type="submit" /> <br />
-      </form>
-    </div>
-  </div>
-
-  <footer th:replace="layouts/footer :: footer"></footer>
 </body>
-
 </html>

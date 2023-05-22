@@ -1,9 +1,6 @@
 package ar.edu.unju.fi.model;
 
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-
-public class Producto{
+public class Productos{
 	private String nombre;
 	private int codigo;
 	private double precio;
@@ -11,16 +8,14 @@ public class Producto{
 	private int descuento;
 
 	// Constructor parametrizado
-	public Producto(String nombre, int codigo, double precio, String categoria, int descuento) {
+	public Productos(String nombre, int codigo, double precio, String categoria, int descuento) {
 		this.nombre = nombre;
 		this.codigo = codigo;
 		this.precio = precio;
 		this.categoria = categoria;
 		this.descuento = descuento;
 	}
-	// Constructor vacío
-    public Producto() {
-    }
+
 	// Getters y setters
 	public String getNombre() {
 		return nombre;
