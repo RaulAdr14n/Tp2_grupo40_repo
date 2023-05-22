@@ -31,23 +31,23 @@
       <p>Sábados 9:00 hs a 12:00 hs</p>
 
       <ul>
-        <li><a th:href="mailto:animalada@gmail.com">animaladagmail.com </a></li>
-        <li><a th:href="https://www.facebook.com">facebook</a></li>
-        <li><a th:href="https://www.instagram.com">instagram</a></li>
-        <li><a th:href="https://www.twitter.com">twitter</a></li>
+        <li><a th:href="@{mailto:animalada@gmail.com}">animaladagmail.com </a></li>
+        <li><a th:href="@{https://www.facebook.com}">facebook</a></li>
+        <li><a th:href="@{https://www.instagram.com}">instagram</a></li>
+        <li><a th:href="@{https://www.twitter.com}">twitter</a></li>
       </ul>
-
+	//Parte reservada para envios de email
       <form th:action="@{/}" method="post">
         <label>Nombre: </label><br />
-        <input type="text" placeholder="escribir nombre" th:field="*{nombre}" /><br />
+        <input type="text" placeholder="escribir nombre"  /><br />
 
         <label for="">Email: </label><br />
-        <input type="text" placeholder="escribir email" th:field="*{email}" /><br />
+        <input type="text" placeholder="escribir email"  /><br />
 
         <label for="">Cuidad :</label><br />
-        <input type="text" placeholder="escribir cuidad" th:field="*{ciudad}" /><br /><br />
+        <input type="text" placeholder="escribir cuidad"  /><br /><br />
 
-        <textarea name="Message" rows="8" cols="35" th:field="*{mensaje}"></textarea><br />
+        <textarea name="Message" rows="8" cols="35" ></textarea><br />
         <label>mensaje</label><br /><br />
         <input type="submit" /> <br />
       </form>
