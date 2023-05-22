@@ -1,5 +1,4 @@
 package ar.edu.unju.fi.model;
-
 public class Producto {
 	private String nombre;
 	private int codigo;
@@ -63,11 +62,11 @@ public class Producto {
 		this.descuento = descuento;
 	}
 
-	public String getDescripcion(){
+	public String getDescripcion() {
 		return descripcion;
 	}
 
-	public void setDescripcion(String descripcion){
+	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
 
