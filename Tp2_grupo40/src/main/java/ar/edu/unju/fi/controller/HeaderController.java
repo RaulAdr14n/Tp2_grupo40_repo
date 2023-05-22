@@ -10,6 +10,12 @@ public class HeaderController {
 	public String getConsejosPage(){
 		return "consejos";
 	}
+
+	@RequestMapping(value = "/nuevo_producto", method = RequestMethod.GET)
+	public String getNuevoProducto(){
+		return "nuevo_producto";
+	}
+
 	@RequestMapping(value = "/productos", method = RequestMethod.GET)
 	public String getProductosPage(){
 		return "productos";
