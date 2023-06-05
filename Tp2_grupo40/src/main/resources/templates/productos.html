@@ -14,140 +14,198 @@
     rel="stylesheet" />
   <!--  styles  -->
   <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}" />
   <title>Productos</title>
 </head>
 
 <body>
   <header th:replace="layouts/header :: header"></header>
-  <div class="products__container">
-    <h1>PRODUCTOS</h1>
-    <h2>TODO LO QUE TU MASCOTA NECESITA</h2>
-    <div class="productsDog__img">
-      <img th:src="@{/images/perro_con_buzo.png}" alt="pero con un buzo">
-    </div>
+  <div class="container">
+    <div class="products__container">
+      <h1 class="display-4">PRODUCTOS</h1>
+      <h2>TODO LO QUE TU MASCOTA NECESITA</h2>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="productsDog__img">
+            <img th:src="@{/images/perro_con_buzo.png}" alt="perro con un buzo" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <h3>Alimentos</h3>
+          <p>Desde sus días como cachorros hasta sus años como adultos mayores, nuestra nutrición comienza marcando
+            diferencias que puedes ver, sentir y en las que puedes confiar.</p>
+          <table class="table">
+            <tr>
+              <td>
+                <figure>
+                  <img th:src="@{/images/alimentoperro1.jpg}" alt="Imagen de productos/alimentos" class="img-fluid">
+                  <figcaption>
+                    <h6>ROYAL CANIN</h6>
+                    <h6>ADULTO</h6>
+                  </figcaption>
+                </figure>
+              </td>
+              <td>
+                <figure>
+                  <img th:src="@{/images/alimentoperro2.jpg}" alt="Imagen de productos/alimentos" class="img-fluid">
+                  <figcaption>
+                    <h6>ROYAL CANIN</h6>
+                    <h6>JUNIOR</h6>
+                  </figcaption>
+                </figure>
+              </td>
+              <td>
+                <figure>
+                  <img th:src="@{/images/alimentoperro3.jpg}" alt="Imagen de productos/alimentos" class="img-fluid">
+                  <figcaption>
+                    <h6>ROYAL CANIN</h6>
+                    <h6>CACHORRO</h6>
+                  </figcaption>
+                </figure>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
 
-    <h3>Alimentos</h3>
-
-    <p>Desde sus días como cachorros hasta sus años como adultos mayores, nuestra nutrición comienza marcando
-      diferencias
-      que puedes ver, sentir y en las que puedes confiar.</p>
-
-    <table>
-      <tr>
-        <td>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h3>Salud</h3>
+          <p>Al igual que los humanos, los animales y todos los tipos de ellos necesitan una buena higiene tanto para su
+            salud
+            animal como para el resto de animales y personas. Ellos tienen la misma necesidad de estar cuidados y
+            limpios que
+            nosotros.</p>
+          <table class="table">
+            <tr>
+              <td>
+                <figure>
+                  <img th:src="@{/images/repelente1.jpg}" alt="Imagen de productos/salud" class="img-fluid">
+                  <figcaption>
+                    <h6>ADVANTIX SPOT ON</h6>
+                    <h6>PERRO 4-10KG</h6>
+                  </figcaption>
+                </figure>
+              </td>
+              <td>
+                <figure>
+                  <img th:src="@{/images/repelente2.jpg}" alt="Imagen de productos/salud" class="img-fluid">
+                  <figcaption>
+                    <h6>ADVOCATE CANINO</h6>
+                    <h6>10-25 KG</h6>
+                  </figcaption>
+                </figure>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-12 col-md-6">
+          <h3>Accesorios</h3>
+          <p>Ellos se lo merecen todo. Perros, gatos, roedores, pájaros… Organiza a tu mascota un rincón con encanto y
+            demuéstrale lo mucho que te importa cuidándolo con los accesorios adecuados.</p>
           <figure>
-            <img th:src="@{/images/alimentoperro1.jpg}" alt="Imagen de productos/alimentos">
+            <img th:src="@{/images/accesorios.jpg}" alt="Imagen de productos/accesorios" class="img-fluid">
             <figcaption>
-        <th>
-          <h6>ROYAL CANIN<h6>
-        </th>
-        <th>
-          <h6>ADULTO<h6>
-        </th>
-        </figcapton>
-        </figure>
-        </td>
-
-        <td>
-          <figure>
-            <img th:src="@{images/alimentoperro2.jpg}" alt="Imagen de productos/alimentos">
-            <figcapton>
-        <th>
-          <h6>ROYAL CANIN<h6>
-        </th>
-        <th>
-          <h6>JUNIOR<h6>
-        </th>
-        </figure>
-        </td>
-
-        <td>
-          <figure>
-            <img th:src="@{/images/alimentoperro3.jpg}" alt="Imagen de productos/alimentos">
-            <figcapton>
-        <th>
-          <h6>ROYAL CANIN<h6>
-        </th>
-        <th>
-          <h6>CACHORRO<h6>
-        </th>
-        </figure>
-        </td>
-      </tr>
-    </table>
-
-    <h3>Salud</h3>
-    <p>Al igual que los humanos, los animales y todos los tipos de ellos necesitan una buena higiene tanto para su salud
-      animal como para el resto de animales y personas. Ellos tienen la misma necesidad de estar cuidados y limpios que
-      nosotros.</p>
-    <table>
-      <tr>
-        <td>
-          <figure>
-            <img th:src="@{/images/repelente1.jpg}" alt="Imagen de productos/salud">
-            <figcapton>
-        <th>
-          <h6>ADVANTIX SPOT ON<h6>
-        </th>
-        <th>
-          <h6>PERRO4-10KG<h6>
-        </th>
-        </figure>
-        </td>
-
-        <td>
-          <figure>
-            <img th:src="@{/images/repelente2.jpg}" alt="Imagen de productos/salud">
-            <figcaption>
-        <th>
-          <h6>ADVOCATE CANINO<h6>
-        </th>
-        <th>
-          <h6>10-25 KG<h6>
-        </th>
-        </figcaption>
-
-        </figure>
-        </td>
-      </tr>
-
-    </table>
-
-
-    <h3>Accesorios</h3>
-    <p>Ellos se lo merecen todo. Perros, gatos, roedores, pájaros… Organiza a tu mascota un rincón con encanto y
-      demuéstrale
-      lo mucho que te importa cuidándolo con los accesorios adecuados.</p>
-
-    <figure>
-      <img th:src="@{/images/accesorios.jpg}" alt="Imagen de productos/accesorios">
-      <figcaption>
-        <th>
-          <h6>SER COLLAR/ARNÉS<h6>
-        </th>
-        <th>
-          <h6>TELAS PERSONALIZADAS<h6>
-        </th>
-      </figcaption>
-    </figure>
-    <div class="aboutus__title">
-      <h1>nuevo producto</h1>
-      <a th:href="@{nuevo_producto}" class="button__contact">AGREGAR➝</a>
-      <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Descripción</th>
-        </tr>
-        <tr th:each="producto : ${productos}">
-            <td th:text="${producto.nombre}"></td>
-            <td th:text="${producto.precio}"></td>
-            <td th:text="${producto.descripcion}" ></td>
-        </tr>
-    </table>
+              <h6>SER COLLAR/ARNÉS</h6>
+              <h6>TELAS PERSONALIZADAS</h6>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <h1 class="display-4">Tabla de productos</h1>
     </div>
   </div>
+
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-striped table-product">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Categoría</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Collar ajustable</td>
+              <td>150</td>
+              <td>Accesorios</td>
+              <td>Collar para perros ajustable de alta calidad</td>
+            </tr>
+            <tr>
+              <td>Pelota de goma</td>
+              <td>50</td>
+              <td>Juguetes</td>
+              <td>Pelota de goma resistente para jugar con tu mascota</td>
+            </tr>
+            <tr>
+              <td>Cama acolchada</td>
+              <td>300</td>
+              <td>Accesorios</td>
+              <td>Cama acolchada y suave para perros y gatos</td>
+            </tr>
+            <tr>
+              <td>Juguete interactivo</td>
+              <td>200</td>
+              <td>Juguetes</td>
+              <td>Juguete interactivo para mantener a tu mascota entretenida</td>
+            </tr>
+            <tr>
+              <td>Comedero automático</td>
+              <td>400</td>
+              <td>Accesorios</td>
+              <td>Comedero automático programable para perros y gatos</td>
+            </tr>
+            <tr>
+              <td>Rascador para gatos</td>
+              <td>250</td>
+              <td>Accesorios</td>
+              <td>Rascador de sisal para que tu gato afile sus uñas</td>
+            </tr>
+            <tr>
+              <td>Transportín para mascotas</td>
+              <td>500</td>
+              <td>Accesorios</td>
+              <td>Transportín seguro y cómodo para viajar con tu mascota</td>
+            </tr>
+            <tr>
+              <td>Pipeta antipulgas</td>
+              <td>150</td>
+              <td>Antiparasitarios</td>
+              <td>Pipeta para proteger a tu mascota de pulgas y garrapatas</td>
+            </tr>
+            <tr>
+              <td>Cepillo de pelo</td>
+              <td>100</td>
+              <td>Accesorios</td>
+              <td>Cepillo suave para cepillar el pelo de tu mascota</td>
+            </tr>
+            <tr>
+              <td>Snacks saludables</td>
+              <td>50</td>
+              <td>Alimentos</td>
+              <td>Snacks saludables y deliciosos para premiar a tu mascota</td>
+            </tr>
+            <tr th:each="producto : ${productos}">
+              <td th:text="${producto.nombre}"></td>
+              <td th:text="${producto.precio}"></td>
+              <td th:text="${producto.categoria}"></td>
+              <td th:text="${producto.descripcion}"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="aboutus__title">
+      <h1>nuevo producto</h1>
+      <a th:href="@{nuevo_producto}" class="btn btn-primary">AGREGAR➝</a>
+    </div>
+    </div>
+  </body>
   <footer th:replace="layouts/footer :: footer"></footer>
+  <script type="text/javascript" th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>
