@@ -461,69 +461,37 @@ aside p {
 
 .tips__container {
   position: relative;
-  width: 75%;
-  padding: 1rem;
   margin: auto;
   background-color: #FFFFFF;
-  position: relative;
-  display: column;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 .textTips__container {
-  width: 75%;
   margin: auto;
-  text-align: center;
-  line-height: 2rem;
 }
-
-.textTips__container img {
-  width: 500px;
-  height: 500px;
-  border-radius: 1000px;
-  padding: 1rem;
+.textTips__container img{
+	border-radius: 1px;
 }
 
 .textTips__container h1 {
-  color: #F4592F;
+  color: #004A98;
   font-weight: 700;
-  font-size: 3rem;
-  line-height: 3rem;
 }
 
 .textTips__container h2 {
   color: #222326;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 1.3rem;
-  text-align: center;
-  line-height: 2rem;
-  width: 75%;
   margin: auto;
 }
 
 .textTips__container h3 {
   color: #004A98;
   font-weight: 700;
-  font-size: 1.5rem;
-  text-align: justify;
-  line-height: rem;
-  letter-spacing: 0px;
-  line-height: 3rem;
-  padding: 0.5rem;
 }
 
 .textTips__container p {
   color: #222326;
-  line-height: 3rem;
-  font-size: 1rem;
-  text-align: justify;
-  padding: 0.5rem;
 }
-
 .products__container {
   position: relative;
   padding: 1rem;
@@ -609,11 +577,9 @@ aside p {
   position: relative;
 }
 
-.img__contact img {
-  width: 100%;
-}
-
 .form__contact {
+  width: 50%;
+  margin: auto;
   margin: auto;
   padding: 2rem;
 }
@@ -636,12 +602,9 @@ aside p {
 
 .form__contact input,
 .form__contact textarea {
-  padding: 0.1rem;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  width: 100%;
 }
 
 .form__contact input:focus,
