@@ -14,29 +14,34 @@
     rel="stylesheet" />
   <!--  styles  -->
   <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}" />
   <title>Consejos de Salud</title>
 </head>
 
 <body>
   <header th:replace="layouts/header :: header"></header>
   <main>
-    <div class="tips__container">
-      <div class="textTips__container">
-        <h1>CONSEJOS DE SALUD PARA NUESTRAS MASCOTAS</h1>
-        <h2>
-          a continuación brindamos unos cuantos consejos tanto de salud mental
-          emocional y física para nuestras mascotas
-        </h2>
-        <img alt="Imagen decorativa de perritos" th:src="@{/images/perro_con_auriculares.png}" />
-        <ol>
-          <li>
-            <h3>1) Visita regularmente al veterinario</h3>
-            <p>
-              Es importante que lleves a tu mascota a chequeos regulares para
-              asegurarte de que está en buena salud y detectar cualquier
-              problema a tiempo.
-            </p>
-          </li>
+    <div class="tips__container m-3">
+    <div class="textTips__container">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="text-center">
+            <h1 class="mb-3 display-4">CONSEJOS DE SALUD PARA NUESTRAS MASCOTAS</h1>
+            <h2 class="mb-4">
+              A continuación brindamos unos cuantos consejos tanto de salud mental
+              emocional y física para nuestras mascotas
+            </h2>
+            <img alt="Imagen decorativa de perritos" th:src="@{/images/perro_con_auriculares.png}" class="img-fluid">
+          </div>
+          <ol class="list-unstyled m-1">
+            <li>
+              <h3>1) Visita regularmente al veterinario</h3>
+              <p>
+                Es importante que lleves a tu mascota a chequeos regulares para
+                asegurarte de que está en buena salud y detectar cualquier
+                problema a tiempo.
+              </p>
+            </li>
 
           <li>
             <h3>2) Mantén el peso adecuado</h3>
@@ -87,7 +92,7 @@
           </li>
 
           <li>
-            <h3>7)Control de parásitos</h3>
+            <h3>7) Control de parásitos</h3>
             <p>
               Las pulgas, garrapatas, gusanos y otros parásitos pueden causar
               problemas de salud graves en las mascotas. Asegúrate de utilizar
@@ -123,18 +128,21 @@
               que puedan causar accidentes.
             </p>
           </li>
-        </ol>
-        <h3>
-          Si deseas consultar o comunicarte te dejamos un numero de consultas
-          para poder contactarte en caso de alguna emergencia, o alguna duda
-          particular que tengas. Te responderán las personas mas capacitadas
-          para comentar que ocurre con tu amada mascota!
-        </h3>
-        <h1>3874064403</h1>
+          </ol>
+          <h3 class="mt-5 text-center">
+            Si deseas consultar o comunicarte te dejamos un número de consultas
+            para poder contactarte en caso de alguna emergencia o alguna duda
+            particular que tengas. Te responderán las personas más capacitadas
+            para comentar qué ocurre con tu amada mascota.
+          </h3>
+          <h1 class="mb-5 text-center">3874064403</h1>
+          </div>
+        </div>
       </div>
     </div>
   </main>
   <footer th:replace="layouts/footer :: footer"></footer>
+  <script type="text/javascript" th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>

@@ -14,47 +14,57 @@
     rel="stylesheet" />
   <!--  styles  -->
   <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}" />
   <title>Contáctenos</title>
 </head>
 
 <body>
   <header th:replace="layouts/header :: header"></header>
-  <div class="contact__container">
-    <div class="img__contact">
-      <img th:src="@{/images/bulldog.png}" alt="bulldog inglés en fondo rosado" />
-    </div>
-    <div class="form__contact">
-      <h1>Contáctenos</h1>
-      <p>Av Senador Perez n 1234, Numero de contacto: 3885178176</p>
-      <p>Abierto de :</p>
-      <p>Lunes a viernes de 9:00 hs a 12:30 hs y de 17:00 hs a 21:00 hs</p>
-      <p>Sábados 9:00 hs a 12:00 hs</p>
+  <div class="contact__container container ">
+    <div class="row">
+      <div class="img__contact col-md-6 ">
+        <img th:src="@{/images/bulldog.png}" alt="bulldog inglés en fondo rosado" class="img-fluid" />
+      </div>
+      <div class="form__contact col-md-6 ">
+        <h1>Contáctenos</h1>
+        <p>Av. Senador Perez N°1234, Numero de contacto: 3885178176</p>
+        <p>Abierto de :</p>
+        <p>Lunes a viernes de 9:00 hs a 12:30 hs y de 17:00 hs a 21:00 hs</p>
+        <p>Sábados 9:00 hs a 12:00 hs</p>
 
-      <ul>
-        <li><a th:href="@{mailto:animalada@gmail.com}">animaladagmail.com </a></li>
-        <li><a th:href="@{https://www.facebook.com}">facebook</a></li>
-        <li><a th:href="@{https://www.instagram.com}">instagram</a></li>
-        <li><a th:href="@{https://www.twitter.com}">twitter</a></li>
-      </ul>
-	//Parte reservada para envios de email
-      <form th:action="@{/}" method="post">
-        <label>Nombre: </label><br />
-        <input type="text" placeholder="escribir nombre"  /><br />
+        <ul>
+          <li><a th:href="@{mailto:animalada@gmail.com}">animaladagmail.com </a></li>
+          <li><a th:href="@{https://www.facebook.com}">facebook</a></li>
+          <li><a th:href="@{https://www.instagram.com}">instagram</a></li>
+          <li><a th:href="@{https://www.twitter.com}">twitter</a></li>
+        </ul>
 
-        <label for="">Email: </label><br />
-        <input type="text" placeholder="escribir email"  /><br />
-
-        <label for="">Cuidad :</label><br />
-        <input type="text" placeholder="escribir cuidad"  /><br /><br />
-
-        <textarea name="Message" rows="8" cols="35" ></textarea><br />
-        <label>mensaje</label><br /><br />
-        <input type="submit" /> <br />
-      </form>
+        <!-- Parte reservada para envios de email -->
+        <form th:action="@{/}" method="post">
+          <div class="mb-3">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Escribir nombre" />
+          </div>
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" placeholder="Escribir email" />
+          </div>
+          <div class="mb-3">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" class="form-control" id="ciudad" placeholder="Escribir ciudad" />
+          </div>
+          <div class="mb-3">
+            <label for="mensaje">Mensaje:</label>
+            <textarea class="form-control" id="mensaje" rows="8" cols="35"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
     </div>
   </div>
 
   <footer th:replace="layouts/footer :: footer"></footer>
+  <script type="text/javascript" th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>
