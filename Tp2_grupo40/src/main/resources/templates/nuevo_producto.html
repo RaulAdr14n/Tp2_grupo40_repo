@@ -14,30 +14,43 @@
         rel="stylesheet" />
     <!--  styles  -->
     <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}" />
     <title>Nuevo Producto</title>
 </head>
 
 <body>
     <header th:replace="layouts/header :: header"></header>
-    <div class="form__contact">
-        <h1>Nuevo Producto</h1>
+    <div class="container mt-4" >
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center newProduct__title">Nuevo Producto</h1>
 
-        <!-- Formulario de ingreso de datos del nuevo producto -->
-        <form th:action="@{/producto}" method="post" th:object="${producto}">
-            <label>Nombre:</label>
-            <input type="text" field="*{nombre}" name="nombre"/>
-            <br />
-
-            <label>Precio:</label>
-            <input type="number" field="*{precio}" name="precio"/>
-            <br />
-
-            <label>Descripción:</label>
-            <textarea field="*{descripcion}" name="descripcion"></textarea>
-            <br />
-
-            <button type="submit">Guardar</button>
-        </form>
+                <!-- Formulario de ingreso de datos del nuevo producto -->
+                <form th:action="@{/producto}" method="post" th:object="${producto}">
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input type="text" class="form-control" field="*{nombre}" name="nombre" />
+                    </div>
+                    <div class="form-group">
+                        <label>Precio:</label>
+                        <input type="number" class="form-control" field="*{precio}" name="precio" />
+                    </div>
+                    <div class="form-group">
+                        <label>Categoría:</label>
+                        <input type="text" class="form-control" field="*{categoria}" name="categoria" />
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción:</label>
+                        <textarea class="form-control" field="*{descripcion}" name="descripcion"></textarea>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary mx-2" type="submit">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     <footer th:replace="layouts/footer :: footer"></footer>
+
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js}"></script>
 </body>

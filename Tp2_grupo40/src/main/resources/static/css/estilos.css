@@ -14,7 +14,6 @@
   color: #004A98;
 }
 html {
-  background-color: #FFFFFF;
   margin: auto;
 }
 
@@ -34,6 +33,14 @@ h3 {
   font-family: "Lexend Deca", sans-serif;
 }
 
+.nav__style{
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .header__container {
   position: relative;
   width: 100%;
@@ -44,7 +51,6 @@ h3 {
 
 .menu ul {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
@@ -57,18 +63,18 @@ h3 {
 }
 
 .menu li:hover a {
-  color: #FFFFFF;
+  color: #DC3C4D;
 }
 
 .menu a {
-  color: #F8C000;
+  color: #37383c;
   text-decoration: none;
 }
 
 footer {
   position: relative;
   width:100%;
-  padding: 1rem;
+  padding: 3rem;
   margin: auto;
   background-color: #FFFFFF;
   position: relative;
@@ -102,6 +108,15 @@ footer {
   align-content: center;
 }
 
+.heading__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  align-content: center;
+}
 .tittle__container {
   position: relative;
   display: flex;
@@ -126,8 +141,6 @@ footer {
   font-family: "Lexend Deca", sans-serif;
   color: #000000;
   font-weight: 700;
-  font-size: 5rem;
-  line-height: 2rem;
 }
 
 .heading__container h2 {
@@ -155,12 +168,15 @@ footer {
   color: #FFFFFF;
   border-radius: 24px;
 }
+.button{
+  margin-top: 2em;
+}
+
 
 .welcome__container {
   position: relative;
   width: 100%;
   z-index: 2;
-  padding: 1rem;
   background-color: #DC3C4D;
   position: relative;
   display: flex;
@@ -168,40 +184,9 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .text__container {
-  padding: 3rem;
-  width: 50%;
-}
-
-.text__container h2 {
-  color: #F8C000;
-  font-weight: 700;
-  font-size: 5rem;
-  text-align: center;
-  line-height: 5rem;
-}
-
-.text__container h3 {
-  color: #F8C000;
-  font-weight: 700;
-  font-size: 3rem;
-  text-align: center;
-  line-height: 5rem;
-  letter-spacing: 0px;
-}
-
-.text__container p {
-  color: #FFFFFF;
-  letter-spacing: 0px;
-  line-height: 2rem;
-  font-size: 1rem;
-  text-align: justify;
-}
-
-.img__cat {
-  padding: 3rem;
-  width: 50%;
+  width: 100%;
+  padding-top: 6rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -209,14 +194,42 @@ footer {
   align-items: center;
   align-content: center;
   justify-content: center;
+  margin: auto;
+}
+.text__container h2 {
+  color: #F8C000;
+  font-weight: 700;
+  text-align: center;
+}
+
+.text__container h3 {
+  color: #F8C000;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+.text__container p {
+  color: #FFFFFF;
+  text-align: justify;
+}
+
+.img__cat {
+  text-align: center;
+  background-color: #F8C000;
+  width: auto;
 }
 
 .img__cat img {
-  height: 700px;
-  width: 700px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
 }
 
+
 .aboutus__container {
+
   position: relative;
   width: 100%;
   z-index: 2;
@@ -230,6 +243,7 @@ footer {
 }
 
 .aboutus__title {
+  padding-top: 5rem;
   padding: 3rem;
   width: 50%;
   position: relative;
@@ -245,12 +259,10 @@ footer {
 .aboutus__title h1 {
   color: #F4592F;
   font-weight: 700;
-  font-size: 3rem;
   text-align: center;
 }
 
 .button__contact {
-  width: 50%;
   height: 48px;
   margin-top: 2em;
   display: flex;
@@ -268,8 +280,7 @@ footer {
 }
 
 aside {
-  padding: 3rem;
-  width: 50%;
+  padding-top: 4rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -282,7 +293,6 @@ aside {
 aside h3 {
   color: #F4592F;
   font-weight: 700;
-  font-size: 3rem;
   text-align: center;
   padding-bottom: 2rem;
 }
@@ -290,8 +300,6 @@ aside h3 {
 aside p {
   color: #000000;
   letter-spacing: 0px;
-  line-height: 2rem;
-  font-size: 1rem;
   text-align: justify;
 }
 
@@ -367,8 +375,6 @@ aside p {
 
 .textService__container {
   position: relative;
-  padding: 3rem;
-  width: 50%;
 }
 
 .textService__container h1 {
@@ -376,8 +382,6 @@ aside p {
   font-weight: 700;
   font-size: 3rem;
   text-align: left;
-  line-height: 5rem;
-  letter-spacing: 0px;
 }
 
 .textService__container p {
@@ -390,7 +394,6 @@ aside p {
 
 .img__dog {
   padding: 3rem;
-  width: 50%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -401,8 +404,10 @@ aside p {
 }
 
 .img__dog img {
-  height: 500px;
-  width: 500px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
 }
 
 .horario__container {
@@ -420,7 +425,6 @@ aside p {
 }
 
 .horario__container table {
-  width: 85%;
   height: 100px;
   margin: auto;
   border-collapse: collapse;
@@ -439,9 +443,6 @@ aside p {
   border: 1px solid #000000;
 }
 
-.paseadores__container {
-  padding: 6rem;
-}
 
 .paseadores__container h3 {
   color: #004A98;
@@ -452,9 +453,10 @@ aside p {
 }
 
 .paseadores__container img {
-  border-radius: 1000px;
-  height: 150px;
-  width: 150px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
 }
 
 .tips__container {
@@ -492,7 +494,6 @@ aside p {
 }
 .products__container {
   position: relative;
-  width: 60%;
   padding: 1rem;
   margin: auto;
   background-color: #FFFFFF;
@@ -505,16 +506,12 @@ aside p {
 }
 
 .productsDog__img {
-  width: 75%;
   margin: auto;
   text-align: center;
   line-height: 2rem;
 }
 
 .productsDog__img img {
-  width: 500px;
-  height: 500px;
-  border-radius: 1000px;
   padding: 1rem;
 }
 
@@ -533,7 +530,6 @@ aside p {
   font-size: 1.3rem;
   text-align: center;
   line-height: 2rem;
-  width: 75%;
   margin: auto;
 }
 
@@ -562,7 +558,9 @@ aside p {
   text-align: justify;
   padding: 0.5rem;
 }
-
+.table-product tr{
+  font-family: "Open Sans", sans-serif;
+}
 .contact__container {
   position: relative;
   width: 100%;
@@ -582,6 +580,8 @@ aside p {
 .form__contact {
   width: 50%;
   margin: auto;
+  margin: auto;
+  padding: 2rem;
 }
 
 .form__contact h1 {
@@ -613,6 +613,7 @@ aside p {
   border-color: #DC3C4D;
 }
 
-.form__contact textarea {
-  height: 150px;
+.newProduct__title{
+color: #F4592F;
+font-weight: 700;
 }
