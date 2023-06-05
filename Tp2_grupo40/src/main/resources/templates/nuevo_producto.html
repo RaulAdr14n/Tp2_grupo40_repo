@@ -27,26 +27,27 @@
 
                 <!-- Formulario de ingreso de datos del nuevo producto -->
                 <form th:action="@{/producto}" method="post" th:object="${producto}">
-                    <div class="form-group">
-                        <label>Nombre:</label>
-                        <input type="text" class="form-control" field="*{nombre}" name="nombre" />
-                    </div>
-                    <div class="form-group">
-                        <label>Precio:</label>
-                        <input type="number" class="form-control" field="*{precio}" name="precio" />
-                    </div>
-                    <div class="form-group">
-                        <label>Categoría:</label>
-                        <input type="text" class="form-control" field="*{categoria}" name="categoria" />
-                    </div>
-                    <div class="form-group">
-                        <label>Descripción:</label>
-                        <textarea class="form-control" field="*{descripcion}" name="descripcion"></textarea>
-                    </div>
-                    <div class="text-center mt-4">
-                        <button class="btn btn-primary mx-2" type="submit">Guardar</button>
-                    </div>
-                </form>
+    				<div class="form-group">
+        				<label>Nombre:</label>
+       					<input type="text" class="form-control" th:classappend="${#fields.hasErrors('nombre')} ? 'is-invalid'" field="*{nombre}" />
+        				<div class="invalid-feedback" th:if="${#fields.hasErrors('nombre')}" th:errors="{nombre}"></div>
+    				</div>
+    				<div class="form-group">
+        				<label>Precio:</label>
+        				<input type="number" class="form-control" field="*{precio}" name="precio" />
+    				</div>
+    				<div class="form-group">
+        				<label>Categoría:</label>
+        				<input type="text" class="form-control" field="*{categoria}" name="categoria" />
+    				</div>
+    				<div class="form-group">
+        				<label>Descripción:</label>
+        				<textarea class="form-control" field="*{descripcion}" name="descripcion"></textarea>
+    				</div>
+    				<div class="text-center mt-4">
+        				<button class="btn btn-primary mx-2" type="submit">Guardar</button>
+    				</div>
+				</form>
             </div>
         </div>
     </div>

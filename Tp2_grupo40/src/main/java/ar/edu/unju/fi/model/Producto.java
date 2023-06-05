@@ -2,14 +2,32 @@ package ar.edu.unju.fi.model;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
+import jakarta.validation.constraints.Size;
+
 @Component
 public class Producto {
+	@NotEmpty(message="Es obligatorio que coloque nombre al producto")
+	@Size(min=5, max=72, message="El nombre si o si debe contener entre 5 y 72 caracteres, (incluidos los espacios)")
 	private String nombre;
-	private int codigo;
+	@PositiveOrZero(message="El codigo de barras no debe contener un numero negativo")
+	private long codigo;
+	@Positive(message="El precio no debe ser negativo")
+	@Min(value = 1, message = "El precio no puede ser inferior a uno")
+	@Max(value = 100000, message = "No trabajamos con productos que solo se vendan a precio dolar")
+	@NotEmpty(message = "No debe dejar en blanco el espacio para colocar el precio de su producto")
 	private double precio;
+	@NotBlank(message = "Complete el espacio con una categoria porfavor")
 	private String categoria;
 	private int descuento;
+	@NotBlank(message = "Complete el espacio con una descripcion porfavor")
 	private String descripcion;
+
 
 	// Constructor parametrizado
 	public Producto(String nombre, int codigo, double precio, String categoria, int descuento, String descripcion) {
@@ -34,7 +52,7 @@ public class Producto {
 		this.nombre = nombre;
 	}
 
-	public int getCodigo() {
+	public long getCodigo() {
 		return codigo;
 	}
 
