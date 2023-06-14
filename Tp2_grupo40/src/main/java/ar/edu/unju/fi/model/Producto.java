@@ -162,6 +162,10 @@ public class Producto {
 
         return precioConDescuento;
     }
+
+    public int getId() {
+        return 0;
+    }
 }
 
 

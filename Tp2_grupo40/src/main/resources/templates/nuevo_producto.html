@@ -14,43 +14,84 @@
         rel="stylesheet" />
     <!--  styles  -->
     <link rel="stylesheet" th:href="@{/css/estilos.css}" />
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
     <title>Nuevo Producto</title>
 </head>
 
 <body>
     <header th:replace="layouts/header :: header"></header>
-    <div class="container mt-4" >
+    <div class="container mt-4">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h1 class="display-4 text-center newProduct__title">Nuevo Producto</h1>
-
-                <!-- Formulario de ingreso de datos del nuevo producto -->
-                <form th:action="@{/producto}" method="post" th:object="${producto}">
-                    <div class="form-group">
-                        <label>Nombre:</label>
-                        <input type="text" class="form-control" field="*{nombre}" name="nombre" />
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="form-tab" data-bs-toggle="tab" data-bs-target="#form" type="button" role="tab" aria-controls="form" aria-selected="true">Formulario</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                    </li>
+                </ul>
+    
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="form" role="tabpanel" aria-labelledby="form-tab">
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <div class="container">
+                                    <img th:src="@{/images/new_product.png}" alt="icono nuevo producto" class="mx-auto d-block">
+                                </div>
+                                <h1 class="display-6 text-center mt-4 mb-5 product__Title">NUEVO PRODUCTO</h1>
+    
+                                <!-- Formulario de ingreso de datos del nuevo producto -->
+                                <form th:action="@{/producto/guardar}" method="post" th:object="${producto}">
+                                    <div class="form-group">
+                                        <label class="form-label">Nombre:</label>
+                                        <input type="text" class="form-control mb-2" field="*{nombre}" name="nombre" placeholder="Ingrese el nombre del producto" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Precio:</label>
+                                        <input type="number" class="form-control mb-2" field="*{precio}" name="precio" placeholder="Ingrese el precio del producto" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Categoría:</label>
+                                        <input type="text" class="form-control mb-2" field="*{categoria}" name="categoria" placeholder="Ingrese la categoría del producto" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Descripción:</label>
+                                        <textarea class="form-control mb-2" rows="5" field="*{descripcion}" name="descripcion" placeholder="Escriba la descripción del producto"></textarea>
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-primary mx-2" type="submit">Guardar</button>
+                                        <button class="btn btn-secondary mx-2" type="button" onclick="window.location.href='productos'">Cancelar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Precio:</label>
-                        <input type="number" class="form-control" field="*{precio}" name="precio" />
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                Contenido de la pestaña Perfil
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Categoría:</label>
-                        <input type="text" class="form-control" field="*{categoria}" name="categoria" />
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                Contenido de la pestaña Contacto
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Descripción:</label>
-                        <textarea class="form-control" field="*{descripcion}" name="descripcion"></textarea>
-                    </div>
-                    <div class="text-center mt-4">
-                        <button class="btn btn-primary mx-2" type="submit">Guardar</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
+    
+    
     <footer th:replace="layouts/footer :: footer"></footer>
-
+    
+    <!--  Configuración para usar Bootstrap  -->
     <script type="text/javascript" th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js}"></script>
 </body>
