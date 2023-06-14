@@ -37,6 +37,7 @@ public class Producto {
      * Constructor vacío de la clase Producto.
      */
     public Producto() {
+        // Constructor vacío requerido por Spring
     }
 
     /**
