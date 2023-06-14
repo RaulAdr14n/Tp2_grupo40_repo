@@ -29,7 +29,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Lexend Deca", sans-serif;
 }
 
@@ -60,10 +61,12 @@ h3 {
 
 .menu li {
   font-size: 1rem;
+  transition: all 0.3s ease 0s;
 }
 
 .menu li:hover a {
-  color: #DC3C4D;
+  color: #F4592F;
+  font-weight: 500;
 }
 
 .menu a {
@@ -74,9 +77,8 @@ h3 {
 footer {
   position: relative;
   width:100%;
-  padding: 3rem;
+  padding: 3rem 0rem 1rem 0rem ;
   margin: auto;
-  background-color: #FFFFFF;
   position: relative;
   display: column;
   flex-direction: row;
@@ -85,8 +87,7 @@ footer {
   align-items: center;
   margin: auto;
   text-align: center;
-  color: #222326;
-  font-family: "Lexend Deca", sans-serif;
+  color: #37383c;
 }
 
 .topContainers {
@@ -613,7 +614,6 @@ aside p {
   border-color: #DC3C4D;
 }
 
-.newProduct__title{
+.product__Title{
 color: #F4592F;
-font-weight: 700;
 }

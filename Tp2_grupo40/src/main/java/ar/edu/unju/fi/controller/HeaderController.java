@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Controlador que gestiona las solicitudes relacionadas con las páginas del encabezado.
+ * Controlador que gestiona las solicitudes relacionadas con las páginas del
+ * encabezado.
  */
 @Controller
 public class HeaderController {
@@ -18,16 +19,6 @@ public class HeaderController {
     @RequestMapping(value = "/consejos", method = RequestMethod.GET)
     public String getConsejosPage() {
         return "consejos";
-    }
-
-    /**
-     * Maneja la solicitud GET para la página de "Nuevo Producto".
-     *
-     * @return el nombre de la vista "nuevo_producto"
-     */
-    @RequestMapping(value = "/nuevo_producto", method = RequestMethod.GET)
-    public String getNuevoProducto() {
-        return "nuevo_producto";
     }
 
     /**
@@ -51,6 +42,26 @@ public class HeaderController {
     }
 
     /**
+     * Maneja la solicitud GET para la página de "Nuevo Producto".
+     *
+     * @return el nombre de la vista "nuevo_producto"
+     */
+    @RequestMapping(value = "/nuevo_producto", method = RequestMethod.GET)
+    public String getNuevoProducto() {
+        return "nuevo_producto";
+    }
+
+    /**
+     * Maneja la solicitud GET para la página de "Editar Producto".
+     *
+     * @return el nombre de la vista "edit_producto"
+     */
+    @RequestMapping(value = "/edit_producto", method = RequestMethod.GET)
+    public String getEditProducto() {
+        return "edit_producto";
+    }
+
+    /**
      * Maneja la solicitud GET para la página de "Sucursales".
      *
      * @return el nombre de la vista "sucursales"
@@ -58,6 +69,11 @@ public class HeaderController {
     @RequestMapping(value = "/sucursales", method = RequestMethod.GET)
     public String getSucursalesPage() {
         return "sucursales";
+    }
+
+    @RequestMapping(value = "/nueva_sucursal", method = RequestMethod.GET)
+    public String getNuevaSucursalPage() {
+        return "nueva_sucursal";
     }
 
     /**
