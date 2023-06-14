@@ -15,7 +15,7 @@
   <!--  styles  -->
   <link rel="stylesheet" th:href="@{/css/estilos.css}" />
   <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
-  <title>Nueva Producto</title>
+  <title>Nuevo Consejo</title>
 </head>
 
 <body>
@@ -27,40 +27,41 @@
         <div class="card mt-4">
           <div class="card-body">
             <div class="container">
-              <img th:src="@{/images/new_product.png}" alt="icono nueva producto" class="mx-auto d-block" />
+              <img th:src="@{/images/advice.png}" alt="icono nuevo consejo" class="mx-auto d-block" />
             </div>
-            <h1 th:text="${edicion}?'Editar producto' : 'Nueva producto'"
+            <h1 th:text="${edicion}?'Editar consejo' : 'Nuevo consejo'"
               class="display-6 text-center mt-4 mb-5 product__Title">
             </h1>
 
-            <!-- Formulario de ingreso de datos de la nueva producto -->
-            <form th:object="${producto}" th:action="${edicion}?@{/producto/modificar}:@{/producto/guardar}"
+            <!-- Formulario de ingreso de datos del nuevo consejo -->
+            <form th:object="${consejo}" th:action="${edicion}?@{/consejo/modificar}:@{/consejo/guardar}"
               autocomplete="off" method="post">
               <div class="form-group">
-                <label class="form-label" for="nombre">Nombre:</label>
-                <input type="text" class="form-control mb-2" th:field="*{nombre}" id="nombre" name="producto_nombre"
-                  placeholder="Ingrese el nombre de la producto" />
-              </div>
-              <div class="form-group">
                 <label class="form-label" for="codigo">Código:</label>
-                <input type="number" class="form-control mb-2" th:field="*{codigo}" id="codigo" name="producto_codigo"
-                  placeholder="Ingrese el id de la producto" />
+                <input type="text" class="form-control mb-2" th:field="*{codigo}" id="codigo" name="consejo_codigo"
+                  placeholder="Ingrese el id de la consejo" />
                 </div>
               <div class="form-group">
-                <label class="form-label" for="direccion">Precio:</label>
-                <input type="number" class="form-control mb-2" th:field="*{precio}" id="precio"
-                  name="producto_precio" placeholder="Ingrese el precio del producto" />
+                <label class="form-label" for="titulo">Titulo:</label>
+                <input type="text" class="form-control mb-2" th:field="*{titulo}" id="titulo" name="consejo_titulo"
+                  placeholder="Ingrese el titulo de la consejo" />
               </div>
               <div class="form-group">
-                <label class="form-label" for="categoria">Categoría:</label>
-                <input type="text" class="form-control mb-2" th:field="*{categoria}" id="categoria" name="producto_categoria"
-                  placeholder="Ingrese la categoria donde se encuentra el producto" />
+                <label class="form-label" for="direccion">Autor:</label>
+                <input type="text" class="form-control mb-2" th:field="*{autor}" id="autor"
+                  name="consejo_autor" placeholder="Ingrese el autor del consejo" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fecha">Fecha de publicación:</label>
+                <input type="date" class="form-control mb-2" th:field="*{fecha}"
+                th:value="*{#dates.format(fecha, 'yyyy-MM-dd')}" id="fecha"
+                  name="fecha" placeholder="Ingrese la fecha de publicación del consejo" />
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="descripcion">Descripción:</label>
                 <textarea class="form-control" id="descripcion" name="descripcion" rows="3"
-                  placeholder="Ingrese la descripción del producto"></textarea>
+                  placeholder="Ingrese la descripción del consejo"></textarea>
               </div>
               
               <div class="text-center mt-4">                  
@@ -68,7 +69,7 @@
                   Guardar
                 </button>
                 <button class="btn btn-secondary mx-2" type="button">
-                  <a th:href="@{/producto/listado}" class="text-decoration-none text-reset">Cancelar</a>
+                  <a th:href="@{/consejo/listado}" class="text-decoration-none text-reset">Cancelar</a>
                 </button>
               </div>
             </form>
