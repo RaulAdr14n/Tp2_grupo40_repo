@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="theme-color" content="#DC3C4D" />
   <!--  icon  -->
-  <link rel="icon" href="static/images/icon.svg" />
+  <link rel="icon" th:href="@{/images/icon.svg}" />
   <!--  fonts  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,208 +14,61 @@
     rel="stylesheet" />
   <!--  styles  -->
   <link rel="stylesheet" th:href="@{/css/estilos.css}" />
-  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}" />
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
   <title>Productos</title>
 </head>
 
 <body>
-  <header th:replace="layouts/header :: header"></header>
-  <div class="container">
-    <div class="products__container">
-      <h1 class="display-4">PRODUCTOS</h1>
-      <h2>TODO LO QUE TU MASCOTA NECESITA</h2>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="productsDog__img">
-            <img th:src="@{/images/perro_con_buzo.png}" alt="perro con un buzo" class="img-fluid">
-          </div>
+  <header th:replace="~{layouts/header :: header}"></header>
+  <div class="container mt-4 card">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container mt-4 mb-1  ">
+          <img th:src="@{/images/new_product.png}" alt="icono nueva sucursal" class="mx-auto d-block" />
         </div>
-        <div class="col-12 col-md-6">
-          <h3>ALIMENTOS</h3>
-          <p>Desde sus días como cachorros hasta sus años como adultos mayores, nuestra nutrición comienza marcando
-            diferencias que puedes ver, sentir y en las que puedes confiar.</p>
-          <table class="table">
-            <tr>
-              <td>
-                <figure>
-                  <img th:src="@{/images/alimentoperro1.jpg}" alt="Imagen de productos/alimentos" class="img-fluid">
-                  <figcaption>
-                    <h6>ROYAL CANIN</h6>
-                    <h6>ADULTO</h6>
-                  </figcaption>
-                </figure>
-              </td>
-              <td>
-                <figure>
-                  <img th:src="@{/images/alimentoperro2.jpg}" alt="Imagen de productos/alimentos" class="img-fluid">
-                  <figcaption>
-                    <h6>ROYAL CANIN</h6>
-                    <h6>JUNIOR</h6>
-                  </figcaption>
-                </figure>
-              </td>
-              <td>
-                <figure>
-                  <img th:src="@{/images/alimentoperro3.jpg}" alt="Imagen de productos/alimentos" class="img-fluid">
-                  <figcaption>
-                    <h6>ROYAL CANIN</h6>
-                    <h6>CACHORRO</h6>
-                  </figcaption>
-                </figure>
-              </td>
-            </tr>
+        <h2 class="text-center product__Title display-6 mt-1 mb-4">Lista de Productos</h2>
+
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Precio($)</th>
+                <th>Categoría</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each="prod : ${productos}">
+                <td th:text="${prod.nombre}"></td>
+                <td th:text="${prod.codigo}"></td>
+                <td th:text="${prod.precio}"></td>
+                <td th:text="${prod.categoria}"></td>
+                <td th:text="${prod.descripcion}"></td>
+                <td>
+                  <div class="d-flex justify-content-center">
+                    <a th:href="@{/producto/modificar/}+${prod.nombre}" class="btn btn-primary me-2">EDITAR</a>
+                    <a th:href="@{/producto/eliminar/}+${prod.nombre}" class="btn btn-danger">ELIMINAR</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h3>SALUD</h3>
-          <p>Al igual que los humanos, los animales y todos los tipos de ellos necesitan una buena higiene tanto para su
-            salud
-            animal como para el resto de animales y personas. Ellos tienen la misma necesidad de estar cuidados y
-            limpios que
-            nosotros.</p>
-          <table class="table">
-            <tr>
-              <td>
-                <figure>
-                  <img th:src="@{/images/repelente1.jpg}" alt="Imagen de productos/salud" class="img-fluid">
-                  <figcaption>
-                    <h6>ADVANTIX SPOT ON</h6>
-                    <h6>PERRO 4-10KG</h6>
-                  </figcaption>
-                </figure>
-              </td>
-              <td>
-                <figure>
-                  <img th:src="@{/images/repelente2.jpg}" alt="Imagen de productos/salud" class="img-fluid">
-                  <figcaption>
-                    <h6>ADVOCATE CANINO</h6>
-                    <h6>10-25 KG</h6>
-                  </figcaption>
-                </figure>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="col-12 col-md-6">
-          <h3>ACCESORIOS</h3>
-          <p>Ellos se lo merecen todo. Perros, gatos, roedores, pájaros… Organiza a tu mascota un rincón con encanto y
-            demuéstrale lo mucho que te importa cuidándolo con los accesorios adecuados.</p>
-          <figure>
-            <img th:src="@{/images/accesorios.jpg}" alt="Imagen de productos/accesorios" class="img-fluid">
-            <figcaption>
-              <h6>SER COLLAR/ARNÉS</h6>
-              <h6>TELAS PERSONALIZADAS</h6>
-            </figcaption>
-          </figure>
-        </div>
+    </div>
+    <div class="aboutus__title mt-4">
+      <h2 class="text-center product__Title display-6 mb-5">Nuevo Producto</h2>
+      <div class="text-center">
+        <a th:href="@{/producto/nuevo}" class="btn btn-primary">AGREGAR ➝</a>
       </div>
-
     </div>
   </div>
 
-    <div class="container">
-      <div class="aboutus__title">
-      <h1>TABLA DE PRODUCTOS</h1>
-      </div>
-      <div class="table-responsive">
-        <table class="table table-striped table-product">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Precio($)</th>
-              <th>Categoría</th>
-              <th>Descripción</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Collar ajustable</td>
-              <td>150</td>
-              <td>Accesorios</td>
-              <td>Collar para perros ajustable de alta calidad</td>
-            </tr>
-            <tr>
-              <td>Pelota de goma</td>
-              <td>50</td>
-              <td>Juguetes</td>
-              <td>Pelota de goma resistente para jugar con tu mascota</td>
-            </tr>
-            <tr>
-              <td>Cama acolchada</td>
-              <td>300</td>
-              <td>Accesorios</td>
-              <td>Cama acolchada y suave para perros y gatos</td>
-            </tr>
-            <tr>
-              <td>Juguete interactivo</td>
-              <td>200</td>
-              <td>Juguetes</td>
-              <td>Juguete interactivo para mantener a tu mascota entretenida</td>
-            </tr>
-            <tr>
-              <td>Comedero automático</td>
-              <td>400</td>
-              <td>Accesorios</td>
-              <td>Comedero automático programable para perros y gatos</td>
-            </tr>
-            <tr>
-              <td>Rascador para gatos</td>
-              <td>250</td>
-              <td>Accesorios</td>
-              <td>Rascador de sisal para que tu gato afile sus uñas</td>
-            </tr>
-            <tr>
-              <td>Transportín para mascotas</td>
-              <td>500</td>
-              <td>Accesorios</td>
-              <td>Transportín seguro y cómodo para viajar con tu mascota</td>
-            </tr>
-            <tr>
-              <td>Pipeta antipulgas</td>
-              <td>150</td>
-              <td>Antiparasitarios</td>
-              <td>Pipeta para proteger a tu mascota de pulgas y garrapatas</td>
-            </tr>
-            <tr>
-              <td>Cepillo de pelo</td>
-              <td>100</td>
-              <td>Accesorios</td>
-              <td>Cepillo suave para cepillar el pelo de tu mascota</td>
-            </tr>
-            <tr>
-              <td>Snacks saludables</td>
-              <td>50</td>
-              <td>Alimentos</td>
-              <td>Snacks saludables y deliciosos para premiar a tu mascota</td>
-            </tr>
-            <tr th:each="producto : ${productos}">
-              <td th:text="${producto.nombre}"></td>
-              <td th:text="${producto.precio}"></td>
-              <td th:text="${producto.categoria}"></td>
-              <td th:text="${producto.descripcion}"></td>
-              <td>
-                <a class="btn btn-primary" th:href="@{/producto/editar/{id}(id=${producto.id})}">Editar</a>
-              </td>
-              <td>
-                <a class="btn btn-danger" th:href="@{/producto/eliminar/{id}(id=${producto.id})}"
-                   onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar</a>
-              </td>
-              
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="aboutus__title">
-      <h1>NUEVO PRODUCTO</h1>
-      <a th:href="@{nuevo_producto}" class="btn btn-lg btn-primary">AGREGAR➝</a>
-    </div>
-  </body>
-  <footer th:replace="layouts/footer :: footer"></footer>
+  <footer th:replace="~{layouts/footer :: footer}"></footer>
+  <!--  Configuración para usar Bootstrap  -->
   <script type="text/javascript" th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js}"></script>
 </body>
 

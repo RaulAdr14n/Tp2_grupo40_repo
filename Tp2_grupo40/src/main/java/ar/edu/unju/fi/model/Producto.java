@@ -163,13 +163,12 @@ public class Producto {
         return precioConDescuento;
     }
 
+    /**
+     * Obtiene el identificador del producto.
+     *
+     * @return el identificador del producto
+     */
     public int getId() {
         return 0;
     }
 }
-
-
-
-
-
-
