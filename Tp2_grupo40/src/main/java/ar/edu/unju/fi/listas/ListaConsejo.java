@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.unju.fi.model.Consejo;
 
 /**
  * Clase que representa una lista de consejos.
  */
+@Component
 public class ListaConsejo {
     // Lista de consejos
     private List<Consejo> consejos;
